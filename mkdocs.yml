@@ -43,4 +43,40 @@ plugins:
 nav:
 - 'Home': 'index.md'
 - 'Glossary': 'glossary.md'
+- Getting started:
+  - 'Overview': 'getting_started/overview.md'
+  - 'Projects': 'getting_started/projects.md'
+- Core Blockchain Concepts:
+  - 'Blockchain': 'core-blockchain-concepts/blockchain.md'
+  - 'Proof-of-Work (PoW)': 'core-blockchain-concepts/proof-of-work.md'
+  - Proof-of-Stake (PoS):
+    - 'Stake Enabled Height': 'core-blockchain-concepts/proof-of-stake/stake-enabled-height.md'
+    - 'Stake Valdation Height': 'core-blockchain-concepts/proof-of-stake/stake-validation-height.md'
+    - 'Proof-of-Stake (PoS)': 'core-blockchain-concepts/proof-of-stake/proof-of-stake.md'
+  - 'Chain Fork Semantics': 'core-blockchain-concepts/chain-fork-sematics.md'
+  - 'Hard Fork Voting and Consensus Rule Changes': 'core-blockchain-concepts/hard-fork-voting-and-consensus-rule-changes.md'
+  - 'Transaction Data': 'core-blockchain-concepts/transaction-data.md'
+  - 'Fork Detection': 'core-blockchain-concepts/fork-detection.md'
+  - 'Transactions': 'core-blockchain-concepts/transactions.md'
+  - 'Contracts': 'core-blockchain-concepts/contracts.md'
+  - 'Merkle Root Construction': 'core-blockchain-concepts/merkle-root-construction.md'
+  - 'Lottery Selection Semantics': 'core-blockchain-concepts/lottery-selection-semantics.md'
+  - 'UTXO Set Semantics': 'core-blockchain-concepts/utxo-set-semantics.md'
+  - 'Compact Filters for SPV': 'core-blockchain-concepts/complex-filters-for-spv.md'
+- Protocol / Peer-to-Peer (P2P) Network:
+  - 'Peer Discovery': 'protocol-p2p-network/peer-discovery.md'
+  - 'Connecting To Peers': 'protocol-p2p-network/connecting-to-peers.md'
+  - 'Initial Block Download': 'protocol-p2p-network/initial-block-download.md'
+  - 'Blocks-First': 'protocol-p2p-network/blocks-first.md'
+  - 'Headers-First': 'protocol-p2p-network/headers-first.md'
+  - 'Block Broadcasting': 'protocol-p2p-network/block-broadcasting.md'
+  - 'Orphan Blocks': 'protocol-p2p-network/orphan-blocks.md'
+  - 'Transaction Broadcasting': 'protocol-p2p-network/transaction-broadcasting.md'
+  - 'Memory Pool': 'protocol-p2p-network/memory-pool.md'
+  - 'Misbehaving Nodes': 'protocol-p2p-network/misbehaving-nodes.md'
+- Contributing:
+  - 'Core Values': 'contributing/core-values.md'
+  - 'Contributor Guidelines': 'contributing/contributor-guidelines.md'
+  - 'Community': 'contributing/community.md'
+  - 'Contributor Compensation': 'contributing/contributor-compensation.md'
 copyright: If you wish to improve this site, please <a href="https://github.com/decred/dcrdevdocs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/decred/dcrdevdocs/compare"><i class="fa fa-github"></i> send a pull request</a>.<br>dcrdevdocs v0.0.1. Decred Project 2019.
