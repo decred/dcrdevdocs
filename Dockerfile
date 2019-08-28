@@ -1,5 +1,5 @@
 # Build image
-FROM python:3.7.3
+FROM python:3.7
 
 LABEL description="dcrdevdocs build"
 LABEL version="1.0"
@@ -16,7 +16,7 @@ RUN pip install mkdocs && \
 RUN ./bin/build_docs.sh
 
 # Serve image (stable nginx version)
-FROM nginx:1.16.0
+FROM nginx:1.16
 
 LABEL description="dcrdevdocs serve"
 LABEL version="1.0"
