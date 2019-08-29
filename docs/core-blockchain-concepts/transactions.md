@@ -1,14 +1,10 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transactions
 
 ---
-
-## Transactions
-
 
 The following subsections briefly document core transaction details.
 
 #### OpCodes
-
 
 The opcodes used in the pubkey scripts of standard transactions are:
 
@@ -117,4 +113,3 @@ OP_0            A pubkey
 2. A sig compared to B pubkey (no match)
 
 Failure, aborted: two signature matches required but none found so far, and there's only one pubkey remaining
-

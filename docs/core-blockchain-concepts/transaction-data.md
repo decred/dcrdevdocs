@@ -1,9 +1,8 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transaction Data
 
 ---
 
 #### Address Conversion
-
 
 The hashes used in P2PKH and P2SH outputs are commonly encoded as Bitcoin
 addresses.  This is the procedure to encode those hashes and decode the
@@ -41,13 +40,12 @@ Wiki [Base58Check
 encoding](https://en.bitcoin.it/wiki/Base58Check_encoding) page under
 the [Creative Commons Attribution 3.0 license][]:
 
-
 code_string = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 x = convert_bytes_to_big_integer(hash_result)
 
 output_string = ""
 
-while(x > 0) 
+while(x > 0)
    {
        (x, remainder) = divide(x, 58)
        output_string.append(code_string[remainder])
@@ -60,7 +58,6 @@ repeat(number_of_leading_zero_bytes_in_hash)
 
 output_string.reverse();
 
-
 Bitcoin's own code can be traced using the [base58 header
 file][core base58.h].
 
@@ -68,10 +65,7 @@ To convert addresses back into hashes, reverse the base58 encoding, extract
 the checksum, repeat the steps to create the checksum and compare it
 against the extracted checksum, and then remove the version byte.
 
-
-
 #### Raw Transaction Format
-
 
 Bitcoin transactions are broadcast between peers
 in a serialized byte format, called [raw format][/en/glossary/serialized-transaction].
@@ -96,17 +90,14 @@ A raw transaction has the following top-level format:
 | *Varies* | tx_in        | txIn                | Transaction inputs.  See description of txIn below.
 | *Varies* | tx_out count | compactSize uint    | Number of outputs in this transaction.
 | *Varies* | tx_out       | txOut               | Transaction outputs.  See description of txOut below.
-| 4        | lock_time    | uint32_t            | A time (Unix epoch time) or block number.  See the [locktime parsing rules][]. 
+| 4        | lock_time    | uint32_t            | A time (Unix epoch time) or block number.  See the [locktime parsing rules][].
 
 A transaction may have multiple inputs and outputs, so the txIn and
 txOut structures may recur within a transaction. CompactSize unsigned
 integers are a form of variable-length integers; they are described in
 the [CompactSize section][section CompactSize unsigned integer].
 
-
-
-##### TxIn: A Transaction Input (Non-Coinbase) 
-
+##### TxIn: A Transaction Input (Non-Coinbase)
 
 Each non-coinbase input spends an outpoint from a previous transaction.
 (Coinbase inputs are described separately after the example section below.)
@@ -118,11 +109,7 @@ Each non-coinbase input spends an outpoint from a previous transaction.
 | *Varies* | signature script | char[]               | A script-language script which satisfies the conditions placed in the outpoint's pubkey script.  Should only contain data pushes; see the [signature script modification warning][].
 | 4        | sequence         | uint32_t             | Sequence number.  Default for Bitcoin Core and almost all other programs is 0xffffffff.
 
-
-
 ##### Outpoint: The Specific Part Of A Specific Output 
-
-
 
 Because a single transaction can include multiple outputs, the outpoint
 structure includes both a TXID and an output index number to refer to
@@ -133,9 +120,7 @@ specific output.
 | 32    | hash  | char[32]  | The TXID of the transaction holding the output to spend.  The TXID is a hash provided here in internal byte order.
 | 4     | index | uint32_t  | The output index number of the specific output to spend from the transaction. The first output is 0x00000000.
 
-
-
-##### TxOut: A Transaction Output 
+##### TxOut: A Transaction Output
 
 Each output spends a certain number of satoshis, placing them under
 control of anyone who can satisfy the provided pubkey script.
@@ -187,9 +172,7 @@ to a new pay-to-pubkey-hash (P2PKH) output.
 00000000 ................................... locktime: 0 (a block height)
 ```
 
-
 ##### Coinbase Input: The Input Of The First Transaction In A Block 
-
 
 The first transaction in a block, called the coinbase transaction, must
 have exactly one input, called a coinbase. The coinbase input currently
