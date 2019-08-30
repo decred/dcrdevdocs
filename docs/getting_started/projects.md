@@ -2,7 +2,7 @@
 
 ---
 
-All projects listed on this page are currently in active development by Decred Developers.
+All projects listed on this page are currently in active development by Decred developers.
 All projects are open source with their source code available on GitHub.
 New contributors are welcome to contribute to any of these projects.
 
@@ -27,8 +27,8 @@ which is a bitcoin full node implementation that is still under active developme
 - [decred/dcrwallet](https://github.com/decred/dcrwallet) (Go)
 
 dcrwallet is the daemon that handles Decred wallet functionality for a single user.
-It manages all of your accounts, addresses, and transactions;
-tracks balances across addresses; and allows stakeholders to participate in Proof-of-Stake voting.
+It tracks balances across addresses, allows stakeholders to participate in Proof-of-Stake voting,
+and manages all of your accounts, addresses, and transactions.
 
 dcrwallet can operate in two distinct modes.
 The first (and default) is to communicate with a single trusted dcrd instance using JSON-RPC.
@@ -55,6 +55,10 @@ It also integrates with Politeia to allow ticket holders to vote on Proposals.
 
 Decred’s Lightning Network implementation (dcrlnd) is based on the lnd implementation
 for Bitcoin, and is under active development.
+lightning-faucet provides a testnet service similar to traditional cryptocurrency faucets,
+but rather than sending Decred to the user via an on-chain transaction, it will open a
+payment channel with the user.
+lightning-onion is a Decred implementation of the onion routing protocol used by dcrlnd.
 
 ---
 
@@ -120,10 +124,10 @@ Native wallets for both iOS and Android.
 
 - [decred/dcrstakepool](https://github.com/decred/dcrstakepool) (Go)
 
-dcrstakepool is the reference implementation for a Decred VSP
-(Voting Service Provider). It consists of two major components,
-a back-end voting daemon which remains online 24/7 and votes on
-behalf of users, and a front-end website which allows users to
+dcrstakepool is the reference implementation for a Decred Voting Service Provider
+(VSP).
+It consists of two major components: a back-end voting daemon which remains online
+24/7 and votes on behalf of users, and a front-end website which allows users to
 register and manage their accounts.
 
 ---
@@ -132,8 +136,8 @@ register and manage their accounts.
 
 - [decred/dcrpool](https://github.com/decred/dcrpool) (Go)
 
-dcrpool is a lightweight proof-of-work mining pool which operates without collecting
-any personal information from its users.
+dcrpool is a lightweight Proof-of-Work (PoW) mining pool which operates
+without collecting any personal information from its users.
 
 ---
 
