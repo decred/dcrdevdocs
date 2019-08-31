@@ -42,7 +42,6 @@ plugins:
   - search
 nav:
 - 'Home': 'index.md'
-- 'Glossary': 'glossary.md'
 - Getting started:
   - 'Overview': 'getting_started/overview.md'
   - 'Projects': 'getting_started/projects.md'
@@ -69,10 +68,10 @@ nav:
   - 'Merkle Root Construction': 'core-blockchain-concepts/merkle-root-construction.md'
   - 'Lottery Selection Semantics': 'core-blockchain-concepts/lottery-selection-semantics.md'
   - 'UTXO Set Semantics': 'core-blockchain-concepts/utxo-set-semantics.md'
-  - 'Compact Filters for SPV': 'core-blockchain-concepts/complex-filters-for-spv.md'
+  - 'Compact Filters for SPV': 'core-blockchain-concepts/compact-filters-for-spv.md'
 - Protocol / Peer-to-Peer (P2P) Network:
   - 'Peer Discovery': 'protocol-p2p-network/peer-discovery.md'
-  - 'Connecting To Peers': 'protocol-p2p-network/connecting-to-peers.md'
+  - 'Connecting to Peers': 'protocol-p2p-network/connecting-to-peers.md'
   - 'Initial Block Download': 'protocol-p2p-network/initial-block-download.md'
   - 'Blocks-First': 'protocol-p2p-network/blocks-first.md'
   - 'Headers-First': 'protocol-p2p-network/headers-first.md'

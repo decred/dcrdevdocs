@@ -1,9 +1,6 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Orphan Blocks
 
 ---
-
-#### Orphan Blocks
-
 
 Blocks-first nodes may download orphan blocks---blocks whose previous
 block header hash field refers to a block header this node
@@ -36,6 +33,3 @@ message is an orphan block, a headers-first node will discard it immediately.
 
 However, orphan discarding does mean that headers-first nodes will
 ignore orphan blocks sent by miners in an unsolicited block push.
-
-
-</div>

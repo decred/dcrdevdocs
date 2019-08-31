@@ -1,7 +1,7 @@
 # <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Peer Discovery
 
 ---
-## Peer Discovery
+
 
 When started for the first time, programs don't know the IP
 addresses of any active full nodes. In order to discover some IP

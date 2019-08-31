@@ -1,10 +1,6 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Block Broadcasting
 
 ---
-
-
-## Block Broadcasting
-
 
 When a miner discovers a new block, it broadcasts the new block to its
 peers using one of the following methods:

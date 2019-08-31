@@ -1,7 +1,5 @@
 # <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Lottery Selection Semantics
 
----
-
 In Decred's lottery system, 5 tickets are called pseudorandomly to vote on the validity of each block created by PoW miners. This page describes the algorithm used to select tickets. For a high level overview of the ticket voting process, see the [Proof-of-Stake (PoS) Overview](https://docs.decred.org/proof-of-stake/overview/) in the regular docs. 
 
 ## Pseudorandom number generation
@@ -29,5 +27,3 @@ That way there is something concrete to follow.
 | ...     | omitted    | 
 | 17754 | real winning ticket hash here     |   
 | ...     | omitted    | 
-
-
