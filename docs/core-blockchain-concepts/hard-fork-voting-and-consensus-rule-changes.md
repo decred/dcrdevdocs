@@ -1,6 +1,59 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Consensus Rule Changes
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Hard Fork Voting and Consensus Rule Changes
 
 ---
+
+Typically, all full nodes are validating blocks using the same consensus 
+rules. However, there may be situations where some nodes are using different
+consensus rules. For instance, when there is an update to the consensus 
+rules, nodes that have not upgraded will still be using the old rules. 
+This can break consensus in two possible ways.
+
+1. A block following the new consensus rules is accepted by the upgraded
+nodes, but rejected by the non-upgraded nodes. This could happen, for instance,
+if a block includes a transaction using a new feature enabled by 
+the updated consensus rules (e.g. a new opCode). Upgraded nodes will 
+accept the transaction, but non-upgraded nodes will reject it for 
+violating the old consensus rules. 
+2. A block not following the new consensus rules is rejected by the 
+upgraded nodes, but accepted by non-upgraded nodes. This could happen,
+for instance, if a block includes a transaction that is valid under the 
+old rules, but invalid in the new rules (e.g. the transaction was using a 
+feature that was being abused so it was removed).
+
+In the first case (block rejected by non-upgraded nodes), miners that 
+get blockchain data from non-upgraded nodes will not see blocks 
+that use the new consensus rule changes. This
+causes a hard fork, with one chain following
+the old rules and one chain following the new rules.  
+
+Below is a high-level diagram of a hard fork. 
+
+![Hard Fork](../img/hard-fork.svg)
+
+In the second case (block rejected by upgraded nodes), it is possible
+to keep the blockchain from permanently splitting if upgraded nodes
+control a majority of the hash rate. This is because, while upgraded 
+nodes will reject blocks not following the new consensus rules, non-upgraded
+nodes will accept all of the blocks accepted by upgraded nodes. This 
+means that, over time, the upgraded nodes can build a stronger chain, 
+which the non-upgraded nodes must accept as the valid chain. This is 
+called a soft fork. 
+
+Below is a high-level diagram of a soft fork. 
+
+![Soft Fork](../img/soft-fork.svg)
+
+
+**--------------- NOTE: BTC docs version below for reference ----------------**
+
+
+
+
+
+
+
+
+
 
 To maintain consensus, all full nodes validate blocks using the same
 consensus rules. However, sometimes the consensus rules are changed to
@@ -28,7 +81,7 @@ nodes. This creates permanently divergent chains---one for non-upgraded
 nodes and one for upgraded nodes---called a [hard
 fork][/en/glossary/hard-fork].
 
-![Hard Fork](/img/dev/en-hard-fork.svg)
+![Hard Fork](../img/hard-fork.svg)
 
 In the second case, rejection by upgraded nodes, it's possible to keep
 the block chain from permanently diverging if upgraded nodes control a
@@ -38,7 +91,7 @@ upgraded nodes can build a stronger chain that the non-upgraded nodes
 will accept as the best valid block chain. This is called a [soft
 fork][/en/glossary/soft-fork].
 
-![Soft Fork](/img/dev/en-soft-fork.svg)
+![Soft Fork](../img/soft-fork.svg)
 
 Although a fork is an actual divergence in block chains, changes to the
 consensus rules are often described by their potential to create either
