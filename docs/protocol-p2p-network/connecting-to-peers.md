@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Connecting to Peers
+# <img class="dcr-icon" src="/img/dcr-icons/AtoB.svg" /> Connecting to Peers
 
 ---
 

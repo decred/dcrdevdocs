@@ -1,3 +1,3 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Contributor Guidelines
+# <img class="dcr-icon" src="/img/dcr-icons/Question.svg" /> Contributor Guidelines
 
 ---

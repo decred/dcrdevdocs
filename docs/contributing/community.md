@@ -1,3 +1,3 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Community
+# <img class="dcr-icon" src="/img/dcr-icons/Introductions.svg" /> Community
 
 ---

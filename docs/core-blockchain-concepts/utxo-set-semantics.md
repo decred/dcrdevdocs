@@ -1,3 +1,3 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> UTXO Set Semantics
+# <img class="dcr-icon" src="/img/dcr-icons/Blocks.svg" /> UTXO Set Semantics
 
 ---

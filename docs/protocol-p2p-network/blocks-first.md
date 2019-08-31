@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Blocks-First
+# <img class="dcr-icon" src="/img/dcr-icons/Blocks.svg" /> Blocks-First
 
 ---
 

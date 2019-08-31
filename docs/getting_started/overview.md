@@ -1,3 +1,3 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Info.svg" /> Overview
 
 ---

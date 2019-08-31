@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Block Broadcasting
+# <img class="dcr-icon" src="/img/dcr-icons/Blocks.svg" /> Block Broadcasting
 
 ---
 

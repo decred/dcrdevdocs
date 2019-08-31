@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Fork Detection
+# <img class="dcr-icon" src="/img/dcr-icons/BlockExplorer.svg" /> Fork Detection
 
 ---
 
