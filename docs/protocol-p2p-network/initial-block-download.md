@@ -1,9 +1,6 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Initial Block Download
 
 ---
-
-## Initial Block Download
-
 
 Before a full node can validate unconfirmed transactions and
 recently-mined blocks, it must download and validate all blocks from
@@ -17,13 +14,8 @@ downloaded, such as when a previously-caught-up node has been offline
 for a long time. In this case, a node can use the IBD method to download
 all the blocks which were produced since the last time it was online.
 
-Bitcoin Core uses the IBD method any time the last block on its local
+dcrd uses the IBD method any time the last block on its local
 best block chain has a block header time more than 24 hours in the past.
-Bitcoin Core 0.10.0 will also perform IBD if its local best block chain is
-more than 144 blocks lower than its local best header chain (that is,
+dcrd will also perform IBD if its local best block chain is
+more than 288 blocks lower than its local best header chain (that is,
 the local block chain is more than about 24 hours in the past).
-
-
-
-
-

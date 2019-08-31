@@ -1,9 +1,6 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Blocks-First
 
 ---
-
-### Blocks-First
-
 
 Bitcoin Core (up until version [0.9.3][bitcoin core 0.9.3]) uses a
 simple initial block download (IBD) method we'll call *blocks-first*.

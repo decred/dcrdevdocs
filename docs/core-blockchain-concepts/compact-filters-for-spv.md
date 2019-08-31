@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Compact Filters for SPV
 
 ---
 
@@ -10,9 +10,7 @@ As described in the white paper, the merkle root in the block header along with 
 
 The block's depth in the block chain corresponds to the cumulative difficulty that has been performed to build on top of that particular block. The SPV client knows the merkle root and associated transaction information, and requests the respective merkle branch from a full node. Once the merkle branch has been retrieved, proving the existence of the transaction in the block, the SPV client can then look to block *depth* as a proxy for transaction validity and security. The cost of an attack on a user by a malicious node who inserts an invalid transaction grows with the cumulative difficulty built on top of that block, since the malicious node alone will be mining this forged chain.
 
-
 ### Potential SPV Weaknesses
-
 
 If implemented naively, an SPV client has a few important weaknesses.
 
@@ -22,9 +20,7 @@ Second, the SPV client only requests transactions from full nodes corresponding 
 
 To mitigate the latter issue, Bloom filters have been implemented as a method of obfuscation and compression of block data requests.
 
-
 ### Bloom Filters
-
 
 A Bloom filter is a space-efficient probabilistic data structure that is used to test membership of an element. The data structure achieves great data compression at the expense of a prescribed false positive rate.
 
@@ -38,9 +34,7 @@ Querying of the Bloom filter is done by using the same hash functions as before.
 
 Removal of elements can only be done by scrapping the bloom filter and re-creating it from scratch.
 
-
 ### Application Of Bloom Filters
-
 
 Rather than viewing the false positive rates as a liability, it is used to create a tunable parameter that represents the desired privacy level and bandwidth trade-off. A SPV client creates their Bloom filter and sends it to a full node using the message `filterload`, which sets the filter for which transactions are desired. The command `filteradd` allows addition of desired data to the filter without needing to send a totally new Bloom filter, and `filterclear` allows the connection to revert to standard block discovery mechanisms. If the filter has been loaded, then full nodes will send a modified form of blocks, called a merkle block. The merkle block is simply the block header with the merkle branch associated with the set Bloom filter.
 
@@ -52,5 +46,3 @@ If a user is more privacy-conscious, he can set the Bloom filter to include more
 **Resources:** [BitcoinJ][], a Java implementation of Bitcoin that is based on the SPV security model and Bloom filters. Used in most Android wallets.
 
 Bloom filters were standardized for use via [BIP37](https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki). Review the BIP for implementation details.
-
-</div>

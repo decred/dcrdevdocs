@@ -1,11 +1,10 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Contracts
 
 ---
 
 Contracts are transactions which use the decentralized Bitcoin system to enforce financial agreements. Bitcoin contracts can often be crafted to minimize dependency on outside agents, such as the court system, which significantly decreases the risk of dealing with unknown entities in financial transactions.
 
 ## Introduction
-
 
 The following subsections will describe a variety of Bitcoin contracts
 already in use. Because contracts deal with real people, not just
@@ -15,12 +14,7 @@ Besides the contract types described below, many other contract types
 have been proposed. Several of them are collected on the [Contracts
 page](https://en.bitcoin.it/wiki/Contracts) of the Bitcoin Wiki.
 
-
-</div>
-
-<div class="toccontent-block boxexpand expanded" markdown="block">
 ## Escrow And Arbitration
-
 
 Charlie-the-customer wants to buy a product from Bob-the-businessman,
 but neither of them trusts the other person, so they use a contract to
@@ -43,10 +37,9 @@ To create a multiple-signature ([multisig][/en/glossary/multisig]{:#term-multisi
 output, they each give the others a public key. Then Bob creates the
 following [P2SH multisig][/en/glossary/p2sh-multisig]{:#term-p2sh-multisig}{:.term} redeem script:
 
-
-~~~
+```no-highlight
 OP_2 [A's pubkey] [B's pubkey] [C's pubkey] OP_3 OP_CHECKMULTISIG
-~~~
+```
 
 (Opcodes to push the public keys onto the stack are not shown.)
 
@@ -80,11 +73,9 @@ that Bob created.  She gives a copy of the incomplete transaction to
 both Bob and Charlie.  Either one of them can complete it by adding
 his signature to create the following signature script:
 
-
-~~~
+```no-highlight
 OP_0 [A's signature] [B's or C's signature] [serialized redeem script]
-~~~
-
+```
 
 (Opcodes to push the signatures and redeem script onto the stack are
 not shown. `OP_0` is a workaround for an off-by-one error in the original
@@ -110,5 +101,3 @@ need to worry about their arbitrator stealing their money.
 
 **Resource:** [BitRated](https://www.bitrated.com/) provides a multisig arbitration
 service interface using HTML/JavaScript on a GNU AGPL-licensed website.
-
-</div>

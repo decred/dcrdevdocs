@@ -1,8 +1,6 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Memory Pool
 
 ---
-
-### Memory Pool
 
 Full peers may keep track of unconfirmed transactions which are eligible to
 be included in the next block. This is essential for miners who will

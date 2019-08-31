@@ -1,9 +1,8 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Merkle Root Construction
 
 ---
 
 #### Merkle Trees
-
 
 The merkle root is constructed using all the TXIDs of transactions in
 this block, but first the TXIDs are placed in order as required by the
@@ -47,4 +46,3 @@ hashed to produce the merkle root.
 TXIDs and intermediate hashes are always in internal byte order when they're
 concatenated, and the resulting merkle root is also in internal byte
 order when it's placed in the block header.
-

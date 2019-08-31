@@ -1,9 +1,6 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Overview
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Headers-First
 
 ---
-
-### Headers-First
-
 
 Bitcoin Core 0.10.0 uses an initial block download (IBD) method called
 *headers-first*. The goal is to download the headers for the best [header
