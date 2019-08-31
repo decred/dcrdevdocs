@@ -59,7 +59,7 @@ nav:
   - Transactions:
     - 'Transactions': 'core-blockchain-concepts/transactions/transactions.md'
     - 'Transaction Format': 'core-blockchain-concepts/transactions/transaction-format.md' 
-    - 'opCodes': 'core-blockchain-concepts/transactions/opcodes.md' 
+    - 'Opcodes': 'core-blockchain-concepts/transactions/opcodes.md' 
     - 'Transaction Extensions': 'core-blockchain-concepts/transactions/transaction-extensions.md'
   - 'Addresses': 'core-blockchain-concepts/addresses.md'
   - 'Blockchain Parameters': 'core-blockchain-concepts/blockchain-parameters.md'

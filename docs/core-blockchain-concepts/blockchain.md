@@ -45,4 +45,3 @@ Transaction outputs that have been spent are called transaction outputs.
 Transaction outputs that have not been spent are called Unspent Transaction Outputs (UTXOs).
 For a payment to be valid, it must only contain UTXOs as inputs.
 
-For more on transactions, see the [Transactions page](transactions.md).
