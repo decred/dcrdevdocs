@@ -56,7 +56,14 @@ nav:
   - 'Hard Fork Voting and Consensus Rule Changes': 'core-blockchain-concepts/hard-fork-voting-and-consensus-rule-changes.md'
   - 'Transaction Data': 'core-blockchain-concepts/transaction-data.md'
   - 'Fork Detection': 'core-blockchain-concepts/fork-detection.md'
-  - 'Transactions': 'core-blockchain-concepts/transactions.md'
+  - Transactions:
+    - 'Transactions': 'core-blockchain-concepts/transactions/transactions.md'
+    - 'Transaction Format': 'core-blockchain-concepts/transactions/transaction-format.md' 
+    - 'opCodes': 'core-blockchain-concepts/transactions/opcodes.md' 
+    - 'Transaction Extensions': 'core-blockchain-concepts/transactions/transaction-extensions.md'
+  - 'Addresses': 'core-blockchain-concepts/addresses.md'
+  - 'Blockchain Parameters': 'core-blockchain-concepts/blockchain-parameters.md'
+  - 'Script Extensions': 'core-blockchain-concepts/script-extensions.md'
   - 'Contracts': 'core-blockchain-concepts/contracts.md'
   - 'Merkle Root Construction': 'core-blockchain-concepts/merkle-root-construction.md'
   - 'Lottery Selection Semantics': 'core-blockchain-concepts/lottery-selection-semantics.md'
@@ -73,6 +80,10 @@ nav:
   - 'Transaction Broadcasting': 'protocol-p2p-network/transaction-broadcasting.md'
   - 'Memory Pool': 'protocol-p2p-network/memory-pool.md'
   - 'Misbehaving Nodes': 'protocol-p2p-network/misbehaving-nodes.md'
+- Environments:
+  - 'Simnet': 'environments/simnet.md'
+  - 'Testnet': 'environments/testnet.md'
+  - 'Mainnet': 'environments/mainnet.md'
 - Contributing:
   - 'Core Values': 'contributing/core-values.md'
   - 'Contributor Guidelines': 'contributing/contributor-guidelines.md'
