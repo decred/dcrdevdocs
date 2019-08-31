@@ -43,8 +43,11 @@ Below is a high-level diagram of a soft fork.
 
 ![Soft Fork](../img/soft-fork.svg)
 
+<!-- TODO s_ben: Rewrote btc content for PoW, but it needs review. Also,
+	wondering how we're going to ties this together with the PoS voting,
+	hard fork resistance, etc.... -->
 
-**--------------- NOTE: BTC docs version below for reference ----------------**
+**--------------- BTC docs version below for reference ----------------**
 
 
 
