@@ -2,6 +2,7 @@
 
 ---
 
+<!-- TODO jholdstock: Need to validate this paragraph. Also would be good to define `txt -->
 In order to send a transaction to a peer, an `inv` message is sent.
 If a `getdata` response message is received, the transaction is sent using `tx`.
 The peer receiving this transaction also forwards the transaction in the same manner,
