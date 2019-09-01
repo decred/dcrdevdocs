@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Memory Pool
+# <img class="dcr-icon" src="/img/dcr-icons/Pool.svg" /> Memory Pool
 
 ---
 

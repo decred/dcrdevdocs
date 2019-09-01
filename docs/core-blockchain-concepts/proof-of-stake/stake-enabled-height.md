@@ -1,3 +1,3 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Stake Enabled Height
+# <img class="dcr-icon" src="/img/dcr-icons/TicketLive.svg" /> Stake Enabled Height
 
 ---

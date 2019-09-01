@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Proof Of Work
+# <img class="dcr-icon" src="/img/dcr-icons/PoWMine.svg" /> Proof Of Work
 
 ---
 

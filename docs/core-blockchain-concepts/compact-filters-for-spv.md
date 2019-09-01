@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Compact Filters for SPV
+# <img class="dcr-icon" src="/img/dcr-icons/Wallet.svg" /> Compact Filters for SPV
 
 ---
 

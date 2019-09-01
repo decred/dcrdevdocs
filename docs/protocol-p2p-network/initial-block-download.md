@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Initial Block Download
+# <img class="dcr-icon" src="/img/dcr-icons/Blocks.svg" /> Initial Block Download
 
 ---
 

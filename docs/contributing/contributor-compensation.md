@@ -1,3 +1,3 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Contributor Compensation
+# <img class="dcr-icon" src="/img/dcr-icons/ObtainingDecred.svg" /> Contributor Compensation
 
 ---

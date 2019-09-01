@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Peer Discovery
+# <img class="dcr-icon" src="/img/dcr-icons/AtoB.svg" /> Peer Discovery
 
 ---
 

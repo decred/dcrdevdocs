@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Misbehaving Nodes
+# <img class="dcr-icon" src="/img/dcr-icons/BlockExplorer.svg" /> Misbehaving Nodes
 
 ---
 

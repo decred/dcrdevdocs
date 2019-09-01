@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Lottery Selection Semantics
+# <img class="dcr-icon" src="/img/dcr-icons/QuestionTicket.svg" /> Lottery Selection Semantics
 
 ---
 

@@ -1,3 +1,3 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Core Values
+# <img class="dcr-icon" src="/img/dcr-icons/DCRsymbol.svg" /> Core Values
 
 ---
