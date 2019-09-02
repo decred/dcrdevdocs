@@ -8,6 +8,8 @@ extra:
   social:
     - type: 'github'
       link: 'https://github.com/decred'
+    - type: 'medium'
+      link: 'https://medium.com/decred'
     - type: 'twitter'
       link: 'https://twitter.com/decredproject'
     - type: 'reddit'
