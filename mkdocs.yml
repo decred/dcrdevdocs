@@ -73,8 +73,6 @@ nav:
   - 'Peer Discovery': 'protocol-p2p-network/peer-discovery.md'
   - 'Connecting to Peers': 'protocol-p2p-network/connecting-to-peers.md'
   - 'Initial Block Download': 'protocol-p2p-network/initial-block-download.md'
-  - 'Blocks-First': 'protocol-p2p-network/blocks-first.md'
-  - 'Headers-First': 'protocol-p2p-network/headers-first.md'
   - 'Block Broadcasting': 'protocol-p2p-network/block-broadcasting.md'
   - 'Orphan Blocks': 'protocol-p2p-network/orphan-blocks.md'
   - 'Transaction Broadcasting': 'protocol-p2p-network/transaction-broadcasting.md'
