@@ -42,7 +42,7 @@
 <text text-anchor="start" x="123.5" y="-87.3" font-family="Sans" font-style="italic" font-size="14.00">Header Hashes (Highest&#45;Height First)</text>
 <text text-anchor="start" x="125" y="-73.3" font-family="Courier,monospace" font-size="14.00">6fe28c0ab6f1b3...d6190000000000</text>
 <polygon fill="none" stroke="black" points="95.5,-30.5 95.5,-64.5 410.5,-64.5 410.5,-30.5 95.5,-30.5"/>
-<text text-anchor="start" x="134.5" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stopping Hash (Zero Is &quot;No Stop&quot;)</text>
+<text text-anchor="start" x="134.5" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stop Hash (Zero Is &quot;No Stop&quot;)</text>
 <text text-anchor="start" x="125" y="-37.3" font-family="Courier,monospace" font-size="14.00">00000000000000...00000000000000</text>
 <polygon fill="none" stroke="black" stroke-width="2" points="92,-28 92,-243 413,-243 413,-28 92,-28"/>
 </g>

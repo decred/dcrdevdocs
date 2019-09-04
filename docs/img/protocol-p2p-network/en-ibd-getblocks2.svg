@@ -44,7 +44,7 @@
 <text text-anchor="start" x="129.5" y="-87.3" font-family="Courier,monospace" font-size="14.00">459f16a1c695d0...f66d8000000000</text>
 <text text-anchor="start" x="148" y="-73.3" font-family="Sans" font-style="italic" font-size="14.00">......18 more header hashes......</text>
 <polygon fill="none" stroke="black" points="100,-30.5 100,-64.5 415,-64.5 415,-30.5 100,-30.5"/>
-<text text-anchor="start" x="139" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stopping Hash (Zero Is &quot;No Stop&quot;)</text>
+<text text-anchor="start" x="139" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stop Hash (Zero Is &quot;No Stop&quot;)</text>
 <text text-anchor="start" x="129.5" y="-37.3" font-family="Courier,monospace" font-size="14.00">00000000000000...00000000000000</text>
 <polygon fill="none" stroke="black" stroke-width="2" points="96.5,-28 96.5,-271 417.5,-271 417.5,-28 96.5,-28"/>
 </g>

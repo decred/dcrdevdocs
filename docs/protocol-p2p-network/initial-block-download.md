@@ -22,19 +22,21 @@ the local block chain is more than about 24 hours in the past).
 
 ## Blocks-First
 
-dcrd uses a simple initial block download (IBD) method called *blocks-first*.
+dcrd uses a simple IBD method called *blocks-first*.
 The goal is to download the blocks from the best block chain in sequence.
+Below is a high-level diagram of the blocks-first method.
 
 ![Overview Of Blocks-First Method](/img/protocol-p2p-network/en-blocks-first-flowchart.svg)
 
 The first time a node is started, it only has a single block in its
-local best block chain---the hardcoded genesis block (block 0).  This
-node chooses a remote peer, called the sync node, and sends it the
+local best block chain, the hardcoded genesis block (block 0).
+We will refer to this as the "IBD node".
+This node chooses a remote peer, called the "sync node", and sends it the
 `getblocks` message illustrated below.
 
 ![First GetBlocks Message Sent During IBD](/img/protocol-p2p-network/en-ibd-getblocks.svg)
 
-In the header hashes field of the `getblocks` message, this new node
+In the header hashes field in the payload of the `getblocks` message, this new node
 sends the header hash of the only block it has, the genesis block
 (6fe2...0000 in internal byte order).  It also sets the stop hash field
 to all zeroes to request a maximum-size response.
@@ -44,7 +46,7 @@ Upon receipt of the `getblocks` message, the sync node takes the first
 block with that header hash. It finds that block 0 matches, so it
 replies with 500 block inventories (the maximum response to a
 `getblocks` message) starting from block 1. It sends these inventories
-in the `inv` message illustrated below.
+in the inventory (`inv`) message illustrated below.
 
 ![First Inv Message Sent During IBD](/img/protocol-p2p-network/en-ibd-inv.svg)
 
@@ -54,9 +56,11 @@ instance of the object. For blocks, the unique identifier is a hash of
 the block's header.
 
 The block inventories appear in the `inv` message in the same order they
-appear in the block chain, so this first `inv` message contains
-inventories for blocks 1 through 501. (For example, the hash of block 1
-is 4860...0000 as seen in the illustration above.)
+appear in the block chain.
+In our example, as illustrated above, the first `inv` message contains
+inventories for blocks 1 through 501.
+We can also see that the unique identifier for the first message is the
+hash of block 1 (4860…0000).
 
 The IBD node uses the received inventories to request 128 blocks from
 the sync node in the `getdata` message illustrated below.
@@ -92,7 +96,7 @@ its local best block chain for a block that matches one of the header
 hashes in the message, trying each hash in the order they were received.
 If it finds a matching hash, it replies with 500 block inventories
 starting with the next block from that point. But if there is no
-matching hash (besides the stopping hash), it assumes the only block the
+matching hash (besides the stop hash), it assumes the only block the
 two nodes have in common is block 0 and so it sends an `inv` starting with
 block 1 (the same `inv` message seen several illustrations above).
 
@@ -104,7 +108,7 @@ IBD node gets to the tip of the block chain.
 When the IBD node receives the second `inv` message, it will request
 those blocks using `getdata` messages.  The sync node will respond with
 `block` messages.  Then the IBD node will request more inventories with
-another `getblocks` message---and the cycle will repeat until the IBD
+another `getblocks` message, and the cycle will repeat until the IBD
 node is synced to the tip of the block chain.  At that point, the node
 will accept blocks sent through the regular
 [block broadcasting](block-broadcasting.md) mechanism.
@@ -117,8 +121,8 @@ of its downloading. This has several implications:
 
 * **Speed Limits:** All requests are made to the sync node, so if the
   sync node has limited upload bandwidth, the IBD node will have slow
-  download speeds.  Note: if the sync node goes offline, dcrd
-  will continue downloading from another node---but it will still only
+  download speeds.  Note that if the sync node goes offline, dcrd
+  will continue downloading from another node, but it will still only
   download from a single sync node at a time.
 
 * **Download Restarts:** The sync node can send a non-best (but
@@ -128,7 +132,7 @@ of its downloading. This has several implications:
   over again from a different node. dcrd ships with several
   block chain checkpoints at various block heights selected by
   developers to help an IBD node detect that it is being fed an
-  alternative block chain history---allowing the IBD node to restart
+  alternative block chain history, allowing the IBD node to restart
   its download earlier in the process.
 
 * **Disk Fill Attacks:** Closely related to the download restarts, if
