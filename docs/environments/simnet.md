@@ -2,13 +2,13 @@
 
 ---
 
-## Why Use Simnet?
-
-When developing Decred applications or testing potential changes, it is often extremely useful to have a test network where difficulty levels are low enough to generate blocks as needed. In order to facilitate these scenarios, dcrd provides a simulation network ([`--simnet`](simnet.md)), where the difficulty starts extremely low to enable fast CPU mining of blocks. Simnet also has some modified functionality that helps developers avoid common issues early in development. 
+When developing Decred applications or testing potential changes, it is often extremely useful to have a test network where difficulty levels are low enough to generate blocks as needed.
+In order to facilitate these scenarios, dcrd provides a simulation network (`--simnet`), where the difficulty starts extremely low to enable fast CPU mining of blocks.
+Simnet also has some modified functionality that helps developers avoid common issues early in development.
 
 ### Overview
 
-In order to facilitate these scenarios, dcrd provides a simulation network (`--simnet`).  The following is an overview of the most important properties that distinguish it from the main network:
+The following is an overview of the most important properties that distinguish simnet from the main network:
 
 * The difficulty starts extremely low to enable fast CPU mining of blocks
 * Networking changes:
@@ -25,15 +25,18 @@ In order to facilitate these scenarios, dcrd provides a simulation network (`--s
         * Private extended keys start with `sprv`
     * The BIP44 coin type used in HD key paths is lowercase `s`
 
-  ---
+---
 
-## <img class="dcr-icon" src="/img/dcr-icons/AtoB.svg" /> Getting Started 
+## <img class="dcr-icon" src="/img/dcr-icons/AtoB.svg" /> Getting Started
 
-Running a single `dcrd` node on simnet is simply starting `dcrd` with the `--simnet` flag.  However, in order to be really useful, you'll typically want to be able to send coins amongst addresses which implies that blocks will need to be mined and interfacing with a wallet will be needed.
+Running a single `dcrd` node on simnet is simply starting `dcrd` with the `--simnet` flag.
+However, in order to be really useful, you'll typically want to be able to send coins amongst addresses which implies that blocks will need to be mined and interfacing with a wallet will be needed.
 
 In addition, since there are effectively no coins yet on the new private network, an initial series of blocks will need to be mined which pay to an address you own so there are usable coins to spend.
 
-As previously mentioned, simnet uses unique addresses to prevent confusion with the main network.  Thus, it means that a wallet which supports the address format must be used.  For this, `dcrwallet` with the `--simnet` flag can be used.
+As previously mentioned, simnet uses unique addresses to prevent confusion with the main network.
+Thus, it means that a wallet which supports the address format must be used.
+For this, `dcrwallet` with the `--simnet` flag can be used.
 
 The following is a command reference to get going:
 
@@ -41,30 +44,30 @@ The following is a command reference to get going:
 
 * Start dcrd on simnet:
 
-    `$ dcrd --simnet --rpcuser=<username> --rpcpass=<password>`
+  `$ dcrd --simnet --rpcuser=<username> --rpcpass=<password>`
 
 * Create a new simnet wallet:
 
-    `$ dcrwallet --simnet --create`
+  `$ dcrwallet --simnet --create`
 
 * Start dcrwallet on simnet:
 
-    `$ dcrwallet --simnet --username=<username> --password=<password>`
+  `$ dcrwallet --simnet --username=<username> --password=<password>`
 
 * Create a new simnet Decred address:
 
-    `$ dcrctl --simnet --wallet --rpcuser=<username> --rpcpass=<password> getnewaddress`
+  `$ dcrctl --simnet --wallet --rpcuser=<username> --rpcpass=<password> getnewaddress`
 
 * Stop the initial dcrd process and restart it with the mining address set to the output from the previous command:
 
-    `$ dcrd --simnet --rpcuser=<username> --rpcpass=<password> --miningaddr=<S....>`
+  `$ dcrd --simnet --rpcuser=<username> --rpcpass=<password> --miningaddr=<S....>`
 
 * Instruct dcrd to generate enough initial blocks for the first coinbase to mature:
 
-    `$ dcrctl --simnet --rpcuser=<username> --rpcpass=<password> generate 100`
+  `$ dcrctl --simnet --rpcuser=<username> --rpcpass=<password> generate 100`
 
 * Check the wallet balance to ensure the coins are available:
 
-    `$ dcrctl --simnet --wallet --rpcuser=<username> --rpcpass=<password> getbalance`
-  
+  `$ dcrctl --simnet --wallet --rpcuser=<username> --rpcpass=<password> getbalance`
+
 At this point, there is a fully functional private simnet with coins available to send to other simnet addresses.  Any time one or more transactions are sent, a `generate 1` RPC must be issued to mine a new block with the transactions included.

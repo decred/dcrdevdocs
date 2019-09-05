@@ -1,5 +1,9 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Dcrtl.svg" /> Mainnet 
+# <img class="dcr-icon" src="/img/dcr-icons/Dcrtl.svg" /> Mainnet
 
 ---
 
-[Mainnet](mainnet.md) is the main Decred blockchain blah blah blah....**NOTE: insert general advice about mainnet a dev would need. E.g. warnings about deploying to mainnet, what stage you need to be in to deploy to mainnet, any caveats/changes from simnet/testnet to think about.**
+Mainnet is the main blockchain where Decred has real-world economic value.
+
+It is not recommended to test new or experimental features on mainnet.
+Testing on [testnet](testnet.md) or [simnet](simnet.md) is more appropriate.
+These networks carry no economic value, so testing can be performed free from risk or cost.

@@ -1,17 +1,12 @@
 # <img class="dcr-icon" src="/img/dcr-icons/Dcrtl.svg" /> Testnet
 
-Last updated for testnet3
-
 ---
 
-## Why Use Testnet?
+Testnet is a full Decred network which is completely independent from mainnet.
+Decred on testnet carry no economic value, making testnet the perfect place to
+test new applications and experiment without risk before moving onto mainnet.
 
-The [testnet](testnet.md) is a wonderful place where you can experiment with the
-Decred applications without worrying that a mistake will cost you real money. It
-is actually recommended that people use the testnet to learn the basics of the
-Decred software and any new features.
-
-Decred is currently on its 3rd Testnet, also known as testnet3. Testnets are
+Decred is currently on its 3rd testnet, also known as testnet3. Testnets are
 periodically reset to help keep a manageable blockchain file size.
 
 ## How to Run a Testnet Node
@@ -19,22 +14,19 @@ periodically reset to help keep a manageable blockchain file size.
 Running a testnet3 node is incredibly easy. Your application of choice will need
 to download the testnet3 blockchain, and you will need to create a new wallet
 file for testnet3 use. Your mainnet blockchain and wallet files will remain
-untouched. Switching between the two is incredibly easy.
+untouched.
 
----
-
-## Decrediton
+### Decrediton
 
 You can switch Decrediton between mainnet and testnet in the Settings tab by
 using the dropdown box labelled "Network".
 
----
-
-## Command-Line Suite
+### Command-Line Suite
 
 To launch `dcrd` and `dcrwallet` on testnet, simply add the `--testnet` flag to
-your launch command. Alternatively, you could put `testnet=1` in all of your
-config files, but it's usually much faster to use the startup flag.
+your launch command.
+Alternatively, you could put `testnet=1` in all of your
+config files.
 
 On the first launch of `dcrd --testnet`, `dcrd` will begin downloading the
 testnet3 blockchain to the `data/testnet3` folder of `dcrd`'s home directory.
@@ -56,6 +48,13 @@ balance.
 You can acquire coins through the [Decred Testnet
 Faucet](https://faucet.decred.org). Please return any coins to the address
 listed at the bottom of that page when you're done playing with the testnet.
+
+---
+
+## Testnet Block Explorer
+
+A testnet instance of [dcrdata](https://github.com/decred/dcrdata) is available for public
+use at <https://testnet.dcrdata.org/>.
 
 ---
 

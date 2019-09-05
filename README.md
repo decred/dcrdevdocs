@@ -82,6 +82,10 @@ The container can then be run with:
 $ docker run -d --rm -p <local port>:80 decred/dcrdevdocs:latest
 ```
 
+## Pages to review upon testnet reset
+
+- `environments/testnet.md`
+
 ## Getting help
 
 To get help with `dcrdevdocs` please create a [GitHub issue](https://github.com/decred/dcrdevdocs/issues) or the join the [Decred community](https://decred.org/community/) using your preferred chat platform.
