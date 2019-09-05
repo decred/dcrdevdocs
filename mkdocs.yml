@@ -41,7 +41,7 @@ plugins:
   - markdownextradata
   - search
 nav:
-- 'Overview': 'overview.md'
+- 'Home': 'index.md'
 - 'Projects': 'projects.md'
 - Core Blockchain Concepts:
   - 'Blockchain': 'core-blockchain-concepts/blockchain.md'
