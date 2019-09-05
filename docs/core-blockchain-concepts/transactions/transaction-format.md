@@ -2,11 +2,15 @@
 
 ---
 
-In this page, we will examine the basic format common to all transactions and show an example transaction in detail. 
+In this page, we will examine the basic format common to
+all transactions and show an example transaction in detail.
 
-At the protocol level, all transactions share the same basic transaction format; the transaction type is determined by the signature type present in the transaction. The section below describes this basic transaction format. 
+At the protocol level, all transactions share the same basic transaction format;
+the transaction type is determined by the signature type present in the transaction.
+The section below describes this basic transaction format.
 
-Lower-level documentation for each possible variant of signature can be found in the relevant source files in the [dcrd](https://github.com/decred/dcrd) repo.
+Lower-level documentation for each possible variant of signature can be found in
+the relevant source files in the [dcrd](https://github.com/decred/dcrd) repo.
 
 Below are the top-level fields of any transaction.
 
@@ -22,14 +26,24 @@ Expiry       | The block height at which the transaction expires and is no longe
 
 ### Bitcoin similarities
 
-Decred originally began as fork of the Bitcoin client [btcd](https://github.com/btcsuite/btcd), and its transaction format has similarities to Bitcoin's. However, to address some issues Bitcoin transactions had at the time, Decred implemented separate fields that allowed for script versioning and transaction immalleability. Bitcoin later added support for these features in the SegWit [soft fork](https://en.wikipedia.org/wiki/SegWit). However, to avoid a hard fork and preserve backwards compatibility, Bitcoin implemented these changes inside the signature scripts, not as separate fields. In this respect, Decred and Bitcoin transactions are conceptually similar, but differ somewhat in their implementation.
-
+Decred originally began as fork of the Bitcoin client [btcd](https://github.com/btcsuite/btcd),
+and its transaction format has similarities to Bitcoin's.
+However, to address some issues Bitcoin transactions had at the time,
+Decred implemented separate fields that allowed for script versioning and transaction immalleability.
+Bitcoin later added support for these features in the SegWit [soft fork](https://en.wikipedia.org/wiki/SegWit). However, to avoid a hard fork and preserve backwards compatibility,
+Bitcoin implemented these changes inside the signature scripts, not as separate fields.
+In this respect, Decred and Bitcoin transactions are conceptually similar,
+but differ somewhat in their implementation.
 
 ### Inputs
-In Decred, there are two types of transaction inputs: witness and non-witness. A non-witness transaction input is a reference to an unspent output (inputs spend previously-made outputs), and a sequence number. A witness transaction input contains the data necessary to prove that an output can be spent. 
 
+In Decred, there are two types of transaction inputs: witness and non-witness.
+A non-witness transaction input is a reference to an unspent output
+(inputs spend previously-made outputs), and a sequence number.
+A witness transaction input contains the data necessary to prove that an output can be spent.
 
 #### Non-Witness Inputs
+
 A non-witness transaction input is a reference to an unspent output and a sequence number. A reference to an unspent output is called an "outpoint." Outpoints have three fields:
 
 Field            | Description                                                                                                                           | Size
@@ -38,23 +52,28 @@ Transaction hash | The hash of the transaction which contains the output being s
 Output index     | The index of the output being spent                                                                                                   | 4 bytes
 Tree             | Which tree the output being spent is in. This is required because there is more than one tree used to locate transactions in a block. | 1 byte
 
-In addition to an outpoint, non-witness inputs contain a sequence number. This number has more historical significance than relevant usage; however, its most relevant purpose is to enable "locking" of payments so that they cannot be redeemed until a certain time.
-
+In addition to an outpoint, non-witness inputs contain a sequence number.
+This number has more historical significance than relevant usage; however,
+its most relevant purpose is to enable "locking" of payments so that they
+cannot be redeemed until a certain time.
 
 #### Witness Inputs
-A witness transaction input contains the data necessary to prove that an output can be spent. Witness inputs contain four fields of data:
+
+A witness transaction input contains the data necessary to prove that an output can be spent.
+Witness inputs contain four fields of data:
 
 Field            | Description
 ---              | ---
 Value            | The amount of coins that the output being spent transfers.
 Block height     | The height of the block containing the transaction in which the output being spent is located.
 Block index      | The index of the transaction in which the output being spent is located.
-Signature script length | The length of the signature script as a variable-length integer 
+Signature script length | The length of the signature script as a variable-length integer
 Signature script | The script that satisfies the requirements of the script in the output being spent.
 
-
 ### Outputs
-Outputs are transfers of DCR that can be spent by inputs. Outputs always have three fields of data:
+
+Outputs are transfers of DCR that can be spent by inputs.
+Outputs always have three fields of data:
 
 Field             | Description                                                                                     | Size
 ---               | ---                                                                                             | ---
@@ -64,11 +83,17 @@ Public key script | The script that must be satisfied to spend the output       
 
 ---
 
-## Serialization 
-The format displayed above is not the format that transactions are sent and received in. When sending or receiving transactions, they can be serialized in a few ways. The way that a transaction should be deserialized can be determined from its version. Transaction versions occupy four bytes, but those four bytes are actually used to store two separate values. The first two bytes of a transaction's version denote its actual version number. The second two bytes denote its serialization format.
+## Serialization
 
+The format displayed above is not the format that transactions are sent and received in.
+When sending or receiving transactions, they can be serialized in a few ways.
+The way that a transaction should be deserialized can be determined from its version.
+Transaction versions occupy four bytes, but those four bytes are actually used to store two separate values.
+The first two bytes of a transaction's version denote its actual version number.
+The second two bytes denote its serialization format.
 
 ### Serialization Formats
+
 When serializing, there are two main parts of a transaction: Its "prefix" and its witness data.
 The transaction prefix is comprised of:
 
@@ -77,7 +102,9 @@ The transaction prefix is comprised of:
 * Lock time
 * Expiry
 
-The witness data of a transaction involves only its inputs. The included data fields of its inputs depend on the specific serialization format. This format can be any one of the following:
+The witness data of a transaction involves only its inputs.
+The included data fields of its inputs depend on the specific serialization format.
+This format can be any one of the following:
 
 * **0 (Full serialization)** - The transaction's prefix is located immediately before its witness data.
 * **1 (No witness)** - The transaction's prefix is the only data present.
@@ -95,10 +122,11 @@ Here is the raw hex data for the example transaction.
 01000000024ff28b534361e383b5b149df4572feb1fbc659cb07067c3cb6c684452ae79f540100000000ffffffffc619e6ade3f469b8bb60b8ae9b0599eeeca05cd2db251cadea443344eafdac570100000000ffffffff0291c2e26d0200000000001976a914f2ccddc70f8b8bcea24a362bf404841d53cbebc088acd676dd680100000000001976a9141a1f5c7e9f7696989dced5cb9b61464f95790b7288ac000000000000000002ca68865402000000a29c0400040000006a4730440220139466bd10b1f071f9b4ac16ed434d63d090613fd06470f7bca9bba2b6ea6a0a02203cad1297ab9384466b3f304cd61e7e4ffa9abc1ae9fe1630207fae6f200da1680121024d540859b805c5780f2f0da350df8757c1defb72e3381b252d20874478a5549c49743a82010000009e9c0400010000006b483045022100da5b0fde58c4c57a88d96f83b02eddcb67b1b68ce95cc562c895f2e4e57bb44302201a8744aed654d2979bdd797187f6bf63ad1898c5d5c585309eeca558742858b201210307e3d98b004b15561c0f5aa158c90f93de33756d3bfd1f8a1058a4d90ffc7ec7
 ```
 
-
 ### Transaction Breakdown
 
-Below is a breakdown of the above raw hex transaction data into fields. This transaction uses the full serialization format, so we can see witness data along with inputs and outputs. 
+Below is a breakdown of the above raw hex transaction data into fields.
+This transaction uses the full serialization format,
+so we can see witness data along with inputs and outputs.
 
 <table style="overflow-wrap: break-word;">
 <thead>
