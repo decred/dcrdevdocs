@@ -53,7 +53,6 @@ nav:
     - 'Stake Valdation Height': 'core-blockchain-concepts/proof-of-stake/stake-validation-height.md'
     - 'Proof-of-Stake (PoS)': 'core-blockchain-concepts/proof-of-stake/proof-of-stake.md'
   - 'Chain Fork Semantics': 'core-blockchain-concepts/chain-fork-sematics.md'
-  - 'Hard Fork Voting and Consensus Rule Changes': 'core-blockchain-concepts/hard-fork-voting-and-consensus-rule-changes.md'
   - 'Transaction Data': 'core-blockchain-concepts/transaction-data.md'
   - 'Fork Detection': 'core-blockchain-concepts/fork-detection.md'
   - Transactions:
