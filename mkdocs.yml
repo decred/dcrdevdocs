@@ -41,9 +41,8 @@ plugins:
   - markdownextradata
   - search
 nav:
-- Getting Started:
-  - 'Overview': 'getting-started/overview.md'
-  - 'Projects': 'getting-started/projects.md'
+- 'Overview': 'overview.md'
+- 'Projects': 'projects.md'
 - Core Blockchain Concepts:
   - 'Blockchain': 'core-blockchain-concepts/blockchain.md'
   - 'Proof-of-Work (PoW)': 'core-blockchain-concepts/proof-of-work.md'
