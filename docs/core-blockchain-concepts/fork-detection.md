@@ -2,8 +2,6 @@
 
 ---
 
-## Detecting Forks
-
 Non-upgraded nodes may use and distribute incorrect information during
 both types of forks, creating several situations which could lead to
 financial loss. In particular, non-upgraded nodes may relay and accept

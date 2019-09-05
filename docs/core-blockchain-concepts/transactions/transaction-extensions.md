@@ -1,8 +1,10 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transactions Extensions 
+# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transactions Extensions
 
 ---
 
-Transaction expiry has been added, which allows one to prune transactions from the memory pool if the blockchain has reached a certain height[^1]. Previously the only way to remove a transaction from the mempool was to double spend it.
+Transaction expiry has been added, which allows one to prune transactions from
+the memory pool if the blockchain has reached a certain height[^1]. Previously
+the only way to remove a transaction from the mempool was to double spend it.
 
 ---
 
