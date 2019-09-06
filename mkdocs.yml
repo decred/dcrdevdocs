@@ -48,7 +48,7 @@ nav:
   - 'Proof-of-Work (PoW)': 'core-blockchain-concepts/proof-of-work.md'
   - Proof-of-Stake (PoS):
     - 'Stake Enabled Height': 'core-blockchain-concepts/proof-of-stake/stake-enabled-height.md'
-    - 'Stake Valdation Height': 'core-blockchain-concepts/proof-of-stake/stake-validation-height.md'
+    - 'Stake Validation Height': 'core-blockchain-concepts/proof-of-stake/stake-validation-height.md'
     - 'Proof-of-Stake (PoS)': 'core-blockchain-concepts/proof-of-stake/proof-of-stake.md'
   - 'Chain Fork Semantics': 'core-blockchain-concepts/chain-fork-sematics.md'
   - 'Fork Detection': 'core-blockchain-concepts/fork-detection.md'
