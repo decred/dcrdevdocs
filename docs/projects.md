@@ -1,7 +1,5 @@
 # <img class="dcr-icon" src="/img/dcr-icons/Info.svg" /> Projects
 
----
-
 All projects listed on this page are currently in active development.
 All projects are open source with their source code available on GitHub.
 New contributors are welcome to contribute to any of these projects.

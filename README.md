@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.org/decred/dcrdevdocs.png?branch=master)](https://travis-ci.org/decred/dcrdevdocs)
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 
+**Temporary notice: dcrdevdocs is not yet hosted on the decred.org domain.
+A sample can be viewed at <https://devdocs.jamieholdstock.com>.**
+
 `dcrdevdocs` is source code for the [Decred Developers documentation](https://devdocs.decred.org).
 
 `dcrdevdocs` is built with [MkDocs](https://www.mkdocs.org/) - a documentation toolkit written in Python.
