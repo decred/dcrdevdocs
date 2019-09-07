@@ -3,7 +3,8 @@
 ---
 
 Connecting to a peer is done by sending a `version` message, which
-contains your version number, block, and current time to the remote node.
+contains your version number, the height of your last seen block,
+and current time to the remote node.
 The remote node responds with its own `version` message.
 Then both nodes send a `verack` message to the other node to indicate
 the connection has been established.
