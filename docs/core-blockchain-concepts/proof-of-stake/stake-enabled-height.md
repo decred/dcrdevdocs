@@ -4,7 +4,7 @@
 
 Stake Enabled Height (SEH) is one of the [Blockchain Parameters](../blockchain-parameters.md).
 
-SEH describes the height at which the first Proof-of-Stake ticket could possibly mature.
+SEH describes the height at which the first Proof-of-Stake (PoS) ticket could possibly mature.
 The first coins created on the Decred blockchain were the
 [premine](https://docs.decred.org/advanced/premine/) coins.
 According to coinbase maturity rules, these coins could not be spent until after block 256,

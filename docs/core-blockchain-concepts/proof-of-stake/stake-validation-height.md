@@ -5,11 +5,13 @@
 Stake Validation Height (SVH) is one of the [Blockchain Parameters](../blockchain-parameters.md).
 
 SVH is the height at which votes are required to add a new block to the top of the blockchain.
-Before SVH, Proof-of-Work miners are able to add blocks to the chain without including stakeholder votes.
-After SVH, all mined blocks must include at least 3 votes, otherwise they will not be considered
-valid by consensus rules.
+On mainnet, the SVH is 4,096.
+This means the first 4,096 blocks created by Proof-of-Work (PoW) miners were created without including
+votes from Proof-of-Stake (PoS) voters.
+All blocks mined after block 4,096 must include at least 3 votes, otherwise they will not be
+considered valid by consensus rules.
 
-The SVH height is the first block that will be voted on, but will include in itself no votes.
+The SVH is the first block that will be voted on, but will include in itself no votes.
 This is because tickets vote to approve or disapprove the previous block,
 not the block they have been included in.
 
