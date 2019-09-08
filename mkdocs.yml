@@ -63,7 +63,6 @@ nav:
   - 'Addresses': 'core-blockchain-concepts/addresses.md'
   - 'Blockchain Parameters': 'core-blockchain-concepts/blockchain-parameters.md'
   - 'Script Extensions': 'core-blockchain-concepts/script-extensions.md'
-  - 'Contracts': 'core-blockchain-concepts/contracts.md'
   - 'Merkle Root Construction': 'core-blockchain-concepts/merkle-root-construction.md'
   - 'Lottery Selection Semantics': 'core-blockchain-concepts/lottery-selection-semantics.md'
   - 'UTXO Set Semantics': 'core-blockchain-concepts/utxo-set-semantics.md'
