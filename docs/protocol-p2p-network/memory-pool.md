@@ -35,6 +35,11 @@ It is also useful for non-mining peers that wants to keep track of unconfirmed
 transactions, for instance [SPV](https://docs.decred.org/wallets/spv) clients
 that do not maintain their own mempool.
 
+Every time a newly mined block is received by a node, the node removes all of
+the transactions which were included in the block from its mempool.
+The node will also check for any expired, un-mined, transactions and those are
+also removed from the mempool
+
 Transactions which are mined into blocks that later become stale blocks may be
 added back into the memory pool.
 These re-added transactions may be re-removed from the pool almost immediately
