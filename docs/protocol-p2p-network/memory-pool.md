@@ -2,33 +2,47 @@
 
 ---
 
-Full peers may keep track of unconfirmed transactions which are eligible to
-be included in the next block. This is essential for miners who will
-actually mine some or all of those transactions, but it's also useful
-for any peer who wants to keep track of unconfirmed transactions, such
-as peers serving unconfirmed transaction information to SPV clients.
+When a transaction is transmitted to the Decred network, it will be validated by
+all of the full nodes receiving it to ensure it meets required consensus rules.
+If a node deems the transaction to be valid, the node will store the transaction
+in a non-persistent memory pool, or mempool for short.
 
-Because unconfirmed transactions have no permanent status in Bitcoin,
-Bitcoin Core stores them in non-persistent memory, calling them a memory
-pool or mempool. When a peer shuts down, its memory pool is lost except
-for any transactions stored by its wallet. This means that never-mined
-unconfirmed transactions tend to slowly disappear from the network as
-peers restart or as they purge some transactions to make room in memory
-for others.
+Transactions sit in the mempool waiting for a Proof-of-Work (PoW miner) to
+include them in a block.
+Transactions in the mempool are known as "unconfirmed" transactions, as their
+presence in the mempool does not guarantee they will be mined into a block.
+PoW miners select transactions to include in blocks based on configurable policy.
+For example, many miners will prioritise transactions which are paying larger
+fees in order to maximise their profitability.
+
+Because each node will have a different capacity for storing transactions, and
+each node will be in its own unique position in the network, it is highly likely
+that each node on the network will have a different set of transactions in its
+mempool.
+So while the mempool is often referred to as a single entity, in practice, it is
+the sum of all transactions in the mempools of all full nodes connected to the
+network.
+
+As the mempool is non-persistent, it is lost when a node shuts down.
+This means that never-mined unconfirmed transactions tend to slowly disappear
+from the network as nodes restart or as they purge some transactions to make
+room in memory for others.
+
+The mempool is important for PoW miners as it provides a readily-available
+source of validated transactions to include in the block that is currently being
+solved.
+It is also useful for non-mining peers that wants to keep track of unconfirmed
+transactions, for instance [SPV](https://docs.decred.org/wallets/spv) clients
+that do not maintain their own mempool.
 
 Transactions which are mined into blocks that later become stale blocks may be
-added back into the memory pool. These re-added transactions may be
-re-removed from the pool almost immediately if the replacement blocks
-include them. This is the case in Bitcoin Core, which removes stale
-blocks from the chain one by one, starting with the tip (highest block).
-As each block is removed, its transactions are added back to the memory
-pool. After all of the stale blocks are removed, the replacement
-blocks are added to the chain one by one, ending with the new tip. As
-each block is added, any transactions it confirms are removed from the
-memory pool.
-
-SPV clients don't have a memory pool for the same reason they don't
-relay transactions. They can't independently verify that a transaction
-hasn't yet been included in a block and that it only spends UTXOs, so
-they can't know which transactions are eligible to be included in the
-next block.
+added back into the memory pool.
+These re-added transactions may be re-removed from the pool almost immediately
+if the replacement blocks include them.
+This is the case in dcrd, which removes stale blocks from the chain one-by-one,
+starting with the tip (highest block).
+As each block is removed, its transactions are added back to the memory pool.
+After all of the stale blocks are removed, the replacement blocks are added to
+the chain one-by-one, ending with the new tip.
+As each block is added, any transactions it confirms are removed from the memory
+pool.
