@@ -72,11 +72,11 @@ dcrseeder is a crawler for the Decred network, which exposes a list of reliable
 nodes via a built-in DNS server.
 
 When dcrseeder is started for the first time, it will connect to a known trusted
-dcrd instance and listen for `addr` messages. These messages contain the IPs of
-all peers known by the node. dcrseeder will then connect to each of these peers,
-listen for their `addr` messages, and continue to traverse the network in this
-fashion. dcrseeder maintains a list of all known peers and periodically checks
-that they are online and available.
+dcrd instance, perform a `getaddr` request and then disconnect. The `addr`
+response contains the IPs of all peers known by the node. dcrseeder will then
+connect to each of these IPs, perform a `getaddr` request, and continue
+traversing the network in this fashion. dcrseeder maintains a list of all known
+peers and periodically checks that they are online and available.
 
 When dcrseeder is queried for node information, it responds with details of a
 random selection of the reliable nodes it knows about.
