@@ -4,14 +4,15 @@
 
 Stake Enabled Height (SEH) is one of the [Blockchain Parameters](../blockchain-parameters.md).
 
-SEH describes the height at which the first Proof-of-Stake (PoS) ticket could possibly mature.
-The first coins created on the Decred blockchain were the
-[premine](https://docs.decred.org/advanced/premine/) coins.
-According to coinbase maturity rules, these coins could not be spent until after block 256,
-so tickets could not be purchased before this time.
-Assuming a ticket is purchased on block 257, the ticket will take another 256 blocks to mature.
-Thus we can calculate the SEH as `CoinbaseMaturity + TicketMaturity`.
-The target block time for mainnet is 5 minutes, giving a SEH of approximately 43 hours.
+SEH is the height at which the first Proof-of-Stake (PoS) ticket could possibly mature.
+On mainnet, the SEH is 512.
+This means it is not possible for any tickets to mature before block 512.
+The SEH is the sum of the CoinbaseMaturity + TicketMaturity.
+The first coins created on mainnet, for example, were the
+[premine](https://docs.decred.org/advanced/premine/) coins created in the genesis block.
+These coins could not be spent for 256 blocks (the CoinbaseMaturity).
+If these coins were used to purchase a ticket on block 257 (the first block they were spendable),
+that ticket would take another 256 blocks to mature (the TicketMaturity).
 
 **Note:** Even though it is possible for a ticket to **mature** on the Stake Enabled Height,
 tickets cannot **vote** until the [Stake Validation Height](stake-validation-height.md).
