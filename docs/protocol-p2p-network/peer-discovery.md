@@ -2,23 +2,25 @@
 
 ---
 
-When started for the first time, dcrd doesn't know the IP
-addresses of any active full nodes. In order to discover some IP
-addresses, dcrd queries one or more hardcoded DNS seeds.
-The response to the lookup should include one or more DNS
-A records with the IP addresses of full nodes that may accept new
-incoming connections. For example, using the Unix `dig`
-command:
+When started for the first time, dcrd doesn’t know the IP addresses of any
+active full nodes.
+Because randomly querying all IP addresses on the internet looking for full
+nodes is prohibitively expensive, dcrd bootstraps this process by querying a
+hardcoded list of DNS seeds maintained by the community.
+The seeds should respond with one or more DNS A records with the IP addresses of
+full nodes that may accept incoming connections.
+
+The Unix command [dig](https://en.wikipedia.org/wiki/Dig_(command)) can be used
+to demonstrate this process.
+The following example shows the DNS records returned from a testnet Decred seed.
 
 ```no-highlight
-;; QUESTION SECTION:
-;testnet-seed.decred.org.   IN  A
-
-;; ANSWER SECTION:
-testnet-seed.decred.org. 30 IN  A  45.55.94.2
-testnet-seed.decred.org. 30 IN  A  104.159.251.219
-testnet-seed.decred.org. 30 IN  A  206.189.59.15
-testnet-seed.decred.org. 30 IN  A  206.81.16.204
+$ dig +noall +answer testnet-seed.decred.org
+testnet-seed.decred.org.  30  IN  A  192.3.103.135
+testnet-seed.decred.org.  30  IN  A  206.81.16.204
+testnet-seed.decred.org.  30  IN  A  195.49.75.206
+testnet-seed.decred.org.  30  IN  A  52.36.222.36
+testnet-seed.decred.org.  30  IN  A  188.166.43.247
 [...]
 ```
 
