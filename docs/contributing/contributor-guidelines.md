@@ -16,6 +16,10 @@ Once you've found something you'd like to work on, announce your plans **before*
 
 Some repos will also have their own specific guidelines. For instance, the dcrd repo has fairly extensive [Code Contribution Guidelines](https://github.com/decred/dcrd/blob/master/docs/code_contribution_guidelines.md).
 
+## Getting Paid
+
+Decred has a Treasury fund to pay contributors who work effectively to advance the project. For details about how this works, see the [Contributing](https://docs.decred.org/contributing/overview/) section of the regular Decred docs.  
+
 ## GitHub
 
 While different repos may have slightly different GitHub processes, below are the basic steps common to all repos.
