@@ -24,21 +24,10 @@ Outputs      | Serialized list of all the transaction's outputs                 
 Lock time    | The time when a transaction can be spent. (usually zero, in which case it has no effect)       | 4 bytes
 Expiry       | The block height at which the transaction expires and is no longer valid                       | 4 bytes
 
-### Bitcoin similarities
-
-Decred originally began as fork of the Bitcoin client [btcd](https://github.com/btcsuite/btcd),
-and its transaction format has similarities to Bitcoin's.
-However, to address some issues Bitcoin transactions had at the time,
-Decred implemented separate fields that allowed for script versioning and transaction immalleability.
-Bitcoin later added support for these features in the SegWit [soft fork](https://en.wikipedia.org/wiki/SegWit). However, to avoid a hard fork and preserve backwards compatibility,
-Bitcoin implemented these changes inside the signature scripts, not as separate fields.
-In this respect, Decred and Bitcoin transactions are conceptually similar,
-but differ somewhat in their implementation.
 
 ### Inputs
 
-In Decred, there are two types of transaction inputs: witness and non-witness.
-A non-witness transaction input is a reference to an unspent output
+An input is a reference to an unspent output from a previous transaction. In Decred, there are two types of transaction inputs: witness and non-witness. A non-witness transaction input is a reference to an unspent output
 (inputs spend previously-made outputs), and a sequence number.
 A witness transaction input contains the data necessary to prove that an output can be spent.
 
