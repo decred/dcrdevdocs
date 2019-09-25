@@ -33,12 +33,3 @@ but differ somewhat in their implementation.
 
 While Bitcoin uses the [SHA-256](https://en.bitcoinwiki.org/wiki/SHA-256) hashing algorithm to calculate the transaction hash (hash of the Tx containing the output being spent), Decred uses the [blake256r14](https://docs.decred.org/research/blake-256-hash-function/) hashing algorithm. 
 
-Likewise, when hashing a public key to generate an address (e.g. a Pay-to-PubkeyHash (P2PKH) address), Decred uses blake256r14 instead of SHA-256. The full algorithm to create an address is blake256r14+ripemd160+base58.
-
-
-
-
-
-
-
-
