@@ -2,7 +2,7 @@
 
 ---
 
-Stake Enabled Height (SEH) is one of the [Blockchain Parameters](../blockchain-parameters.md).
+Stake Enabled Height (SEH) is one of the [Blockchain Parameters](../../developer-guides/blockchain-parameters.md).
 
 SEH is the height at which the first Proof-of-Stake (PoS) ticket could possibly mature.
 On mainnet, the SEH is 512.

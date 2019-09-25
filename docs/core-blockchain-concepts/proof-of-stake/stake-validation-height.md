@@ -2,7 +2,7 @@
 
 ---
 
-Stake Validation Height (SVH) is one of the [Blockchain Parameters](../blockchain-parameters.md).
+Stake Validation Height (SVH) is one of the [Blockchain Parameters](../../developer-guides/blockchain-parameters.md).
 
 SVH is the height at which votes are required to add a new block to the top of the blockchain.
 On mainnet, the SVH is 4,096.
