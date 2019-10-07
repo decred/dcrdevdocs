@@ -15,7 +15,7 @@ Below is a high-level diagram of the Decred blockchain.
 
 A block of one or more new transactions (Block 1) is collected into
 the transaction data part of a block. These transactions are then
-hashed and rehashed to create the [merkle root](merkle-root-construction.md).
+hashed and rehashed to create the [merkle root](../developer-guides/merkle-root-construction.md).
 
 The [block header](https://docs.decred.org/advanced/block-header-specifications/)
 contains metadata about the block, including
