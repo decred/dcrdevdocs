@@ -2,10 +2,45 @@
 
 ---
 
-#### Merkle Trees
+## Merkle Trees
 
-The merkle root is constructed using all the TXIDs of transactions in
-this block, but first the TXIDs are placed in order as required by the
+
+A merkle tree is a hash-based data structure that summarizes all the transactions in a block. It can be used to quickly and efficiently verify whether or not a transaction is included in a block. 
+
+Merkle trees are created by repeatedly hashing pairs of nodes until there is only one hash left, the Merkle Root. They are constructed from the bottom up, from hashes of the leaf nodes (hashes of the raw input data). The diagram below shows a merkle root constructed from eight leaf nodes. 
+
+![Merkle Tree](../img/core-blockchain-concepts/merkle_tree.svg)
+
+When calculating the merkle roots included in the block header, the data items are the transaction IDs of the transactions in the block.
+
+Regular transactions and stake-based transactions (ticket purchases, votes, revocations) have separate merkle trees. Regular transactions are hashed to the `MerkleRoot` tree. Stake-based transactions are hashed to the `StakeRoot` tree. 
+
+### Hash Function
+
+Unless otherwise specified, all hashing operations **must** be performed with the BLAKE-256 hash function with 14 rounds.
+
+## Merkle Root Construction
+
+All Merkle trees **must** be constructed according to the unique Merkle tree construct originally implemented by Satoshi, which relies on construction of the tree from an ordered list as follows:
+
+1. Calculate list of BLAKE-256 hashes of original data (e.g. transaction IDs) 
+1. If the list is empty, return a 32-byte root hash of all zeroes; otherwise
+1. While the list contains two or more items:
+	- If the number of items remaining in the list is odd, duplicate the final hash
+	- Combine each pair of adjacent entries with the BLAKE-256 hash of the two entries concatenated together. The list will have ceil(N/2) entries remaining after combining the adjacent entries
+1. Return the final remaining item in the list as the Merkle root
+
+The below diagram illustrates these steps.
+
+![Merkle Tree Calculation](../img/core-blockchain-concepts/merkle_root_calc.svg)
+
+!!! warning "Warning"
+	The requirement for duplicating the final hash for internal tree levels that have an odd number of nodes must be carefully considered by applications making use of the resulting Merkle root because it means the final calculated Merkle root for a tree that internally duplicated a hash and one that actually included a duplicate hash at that position will be indistinguishable.
+
+
+**{SB: below is from Bitcoin dev docs. Needs updating for decred?}**
+
+Before the merkle root is calculated, the TXIDs are first placed in order as required by the
 consensus rules:
 
 * The coinbase transaction's TXID is always placed first.
@@ -41,7 +76,7 @@ hashed to produce the merkle root.
          sha256(sha256("82501c1178fa0b222c1f3d474ec726b832013f0a532b44bb620cce8624a5feb1169e1e83e930853391bc6f35f605c6754cfead57cf8387639d3b4096c54f18f4".decode("hex")).digest()).digest().encode("hex_codec")
 -->
 
-![Example Merkle Tree Construction](/img/dev/en-merkle-tree-construction.svg)
+![Example Merkle Tree Construction](../img/core-blockchain-concepts/merkle-tree-construction.svg)
 
 TXIDs and intermediate hashes are always in internal byte order when they're
 concatenated, and the resulting merkle root is also in internal byte
