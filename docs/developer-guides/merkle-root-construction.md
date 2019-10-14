@@ -2,24 +2,31 @@
 
 ---
 
-## Merkle Trees
+This page explains what merkle trees are, how Decred uses them and provides step-by-step instructions for constructing compliant merkle trees.
+
+### Merkle Trees
 
 
-A merkle tree is a hash-based data structure that summarizes all the transactions in a block. It can be used to quickly and efficiently verify whether or not a transaction is included in a block. 
+A merkle tree is a data structure that can be used to store hashes of arbitrary data. In the context of Decred, this might be transaction or ticket data. 
 
 Merkle trees are created by repeatedly hashing pairs of nodes until there is only one hash left, the Merkle Root. They are constructed from the bottom up, from hashes of the leaf nodes (hashes of the raw input data). The diagram below shows a merkle root constructed from eight leaf nodes. 
 
-![Merkle Tree](../img/core-blockchain-concepts/merkle_tree.svg)
+![Merkle Tree](/img/core-blockchain-concepts/merkle_tree.svg)
 
-When calculating the merkle roots included in the block header, the data items are the transaction IDs of the transactions in the block.
+Merkle trees are particularly useful for blockchains, as they efficiently and compactly summarize larger data sets.
 
-Regular transactions and stake-based transactions (ticket purchases, votes, revocations) have separate merkle trees. Regular transactions are hashed to the `MerkleRoot` tree. Stake-based transactions are hashed to the `StakeRoot` tree. 
 
-### Hash Function
+### Merkle Trees in Decred
+
+Merkle roots are used to create compact summaries of all transactions in a block. These merkle roots can then be queried to quickly and efficiently verify whether or not a a transaction is included in a block. 
+
+The block header of each block contains the merkle roots of two merkle trees, the `MerkleRoot` tree and `StakeRoot` tree. The `MerkleRoot` tree contains hashes of all regular transaction IDs. The `StakeRoot` tree contains hashes of stake-based transaction IDs (ticket purchases, votes, revocations, etc.). 
+
+#### Hash Function
 
 Unless otherwise specified, all hashing operations **must** be performed with the BLAKE-256 hash function with 14 rounds.
 
-## Merkle Root Construction
+#### Merkle Root Construction
 
 All Merkle trees **must** be constructed according to the unique Merkle tree construct originally implemented by Satoshi, which relies on construction of the tree from an ordered list as follows:
 
@@ -32,7 +39,7 @@ All Merkle trees **must** be constructed according to the unique Merkle tree con
 
 The below diagram illustrates these steps.
 
-![Merkle Tree Calculation](../img/core-blockchain-concepts/merkle_root_calc.svg)
+![Merkle Tree Calculation](/img/core-blockchain-concepts/merkle_root_calc.svg)
 
 !!! warning "Warning"
 	The requirement for duplicating the final hash for internal tree levels that have an odd number of nodes must be carefully considered by applications making use of the resulting Merkle root because it means the final calculated Merkle root for a tree that internally duplicated a hash and one that actually included a duplicate hash at that position will be indistinguishable.
