@@ -44,7 +44,7 @@ The below diagram illustrates these steps.
 !!! warning "Warning"
 	The requirement for duplicating the final hash for internal tree levels that have an odd number of nodes must be carefully considered by applications making use of the resulting Merkle root because it means the final calculated Merkle root for a tree that internally duplicated a hash and one that actually included a duplicate hash at that position will be indistinguishable.
 
-
+<!-- TODO s-ben: below is from Bitcoin dev docs. Needs updating for decred? -->
 **{SB: below is from Bitcoin dev docs. Needs updating for decred?}**
 
 Before the merkle root is calculated, the TXIDs are first placed in order as required by the
