@@ -3,10 +3,7 @@
 .md-footer-nav,
 .md-footer-meta,
 .md-nav__source {
-    background-color: #3f51b5;
-    
-/*    color: #091440;
-    font-weight: bold;*/
+    background-color: #2970FF;
 }
 
 /* Highlight current page in nav menu */
@@ -47,7 +44,7 @@ p img.dcr-icon {
     	background-color: #091440;
     }
     .md-nav__source {
-    	background-color: #122c5c;
+    	background-color: #2970FF;
     }
 }
 
