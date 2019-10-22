@@ -47,7 +47,6 @@ nav:
 - 'Projects': 'projects.md'
 - Core Blockchain Concepts:
   - 'Blockchain': 'core-blockchain-concepts/blockchain.md'
-  - 'Proof-of-Work (PoW)': 'core-blockchain-concepts/proof-of-work.md'
   - Proof-of-Stake (PoS):
     - 'Stake Enabled Height (SEH)': 'core-blockchain-concepts/proof-of-stake/stake-enabled-height.md'
     - 'Stake Validation Height (SVH)': 'core-blockchain-concepts/proof-of-stake/stake-validation-height.md'
