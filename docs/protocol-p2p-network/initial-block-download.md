@@ -111,7 +111,7 @@ those blocks using `getdata` messages.  The sync node will respond with
 another `getblocks` message, and the cycle will repeat until the IBD
 node is synced to the tip of the block chain.  At that point, the node
 will accept blocks sent through the regular
-[block broadcasting](block-broadcasting.md) mechanism.
+block broadcasting mechanism.
 
 ### Blocks-First Advantages & Disadvantages
 
