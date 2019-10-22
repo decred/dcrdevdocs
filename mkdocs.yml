@@ -69,7 +69,6 @@ nav:
   - 'Orphan Blocks': 'protocol-p2p-network/orphan-blocks.md'
   - 'Transaction Broadcasting': 'protocol-p2p-network/transaction-broadcasting.md'
   - 'Memory Pool': 'protocol-p2p-network/memory-pool.md'
-  - 'Misbehaving Nodes': 'protocol-p2p-network/misbehaving-nodes.md'
 - Environments:
   - 'Mainnet': 'environments/mainnet.md'
   - 'Testnet': 'environments/testnet.md'
