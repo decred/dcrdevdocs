@@ -15,7 +15,7 @@ for a long time. In this case, a node can use the IBD method to download
 all the blocks which were produced since the last time it was online.
 
 dcrd uses the IBD method any time the last block on its local
-best block chain has a block header time more than 24 hours in the past.
+best block chain has a [block header](../developer-guides/block-header-specifications.md) time more than 24 hours in the past.
 dcrd will also perform IBD if its local best block chain is
 more than 288 blocks lower than its local best header chain (that is,
 the local block chain is more than about 24 hours in the past).

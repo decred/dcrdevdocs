@@ -3,7 +3,7 @@
 ---
 
 dcrd may download orphan blocks---blocks whose previous
-block header hash field refers to a block header this node
+[block header](../developer-guides/block-header-specifications.md) hash field refers to a block header this node
 hasn't seen yet. In other words, orphan blocks have no known parent
 (unlike stale blocks, which have known parents but which aren't part of
 the best block chain).
