@@ -2,7 +2,7 @@
 
 ---
 
-This page explains what merkle trees are, how Decred uses them and provides step-by-step instructions for constructing compliant merkle trees.
+This page explains what merkle trees are, how Decred uses them and provides step-by-step instructions for constructing compliant Merkle trees.
 
 ### Merkle Trees
 
