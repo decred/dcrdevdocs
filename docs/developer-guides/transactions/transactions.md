@@ -16,7 +16,7 @@ In addition to regular transactions (sending DCR from one address to another), t
 
 ## Bitcoin Differences
 
-Decred transactions are created in a similar way to Bitcoin, with a couple notable differences.
+Decred transactions are created in a similar way to Bitcoin, with a couple of notable differences.
 
 ### Transaction Format
 

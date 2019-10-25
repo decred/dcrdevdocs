@@ -69,7 +69,7 @@
        y="-8.3999996"
        font-size="14.00"
        id="text6"
-       style="font-size:14px;font-family:Sans;text-anchor:middle">Simplified Decred Block Chain</text>
+       style="font-size:14px;font-family:Sans;text-anchor:middle">Simplified Decred blockchain</text>
     <g
        id="graph2"
        class="cluster">
@@ -260,7 +260,7 @@
          y="-188.4"
          font-family="Sans"
          font-size="14.00"
-         id="text71">Hash Of Previous</text>
+         id="text71">Hash of Previous</text>
       <text
          text-anchor="middle"
          x="328"
@@ -305,7 +305,7 @@
          y="-188.4"
          font-family="Sans"
          font-size="14.00"
-         id="text87">Hash Of Previous</text>
+         id="text87">Hash of Previous</text>
       <text
          text-anchor="middle"
          x="110"
@@ -400,7 +400,7 @@
          y="-188.4"
          font-family="Sans"
          font-size="14.00"
-         id="text119">Hash Of Previous</text>
+         id="text119">Hash of Previous</text>
       <text
          text-anchor="middle"
          x="546"

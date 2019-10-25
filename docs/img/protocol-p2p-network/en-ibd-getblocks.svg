@@ -17,7 +17,7 @@
 </g>
 <!-- getblocks -->
 <g id="node2" class="node"><title>getblocks</title>
-<text text-anchor="start" x="174.5" y="-225.3" font-family="Sans" font-weight="bold" font-size="14.00">GetBlocks Message</text>
+<text text-anchor="start" x="174.5" y="-225.3" font-family="Sans" font-weight="bold" font-size="14.00">getblocks Message</text>
 <text text-anchor="start" x="195.5" y="-202.3" font-family="Sans" font-style="italic" font-size="14.00">Message Header</text>
 <polygon fill="none" stroke="black" points="95.5,-159.5 95.5,-193.5 181.5,-193.5 181.5,-159.5 95.5,-159.5"/>
 <text text-anchor="start" x="98.5" y="-180.3" font-family="Sans" font-style="italic" font-size="14.00">Start String</text>
@@ -39,10 +39,10 @@
 <text text-anchor="start" x="270.5" y="-123.3" font-family="Sans" font-style="italic" font-size="14.00">Header Hash Count</text>
 <text text-anchor="start" x="334" y="-109.3" font-family="Courier,monospace" font-size="14.00">1</text>
 <polygon fill="none" stroke="black" points="95.5,-66.5 95.5,-100.5 410.5,-100.5 410.5,-66.5 95.5,-66.5"/>
-<text text-anchor="start" x="123.5" y="-87.3" font-family="Sans" font-style="italic" font-size="14.00">Header Hashes (Highest&#45;Height First)</text>
+<text text-anchor="start" x="123.5" y="-87.3" font-family="Sans" font-style="italic" font-size="14.00">Header Hashes (highest&#45;height first)</text>
 <text text-anchor="start" x="125" y="-73.3" font-family="Courier,monospace" font-size="14.00">6fe28c0ab6f1b3...d6190000000000</text>
 <polygon fill="none" stroke="black" points="95.5,-30.5 95.5,-64.5 410.5,-64.5 410.5,-30.5 95.5,-30.5"/>
-<text text-anchor="start" x="134.5" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stop Hash (Zero Is &quot;No Stop&quot;)</text>
+<text text-anchor="start" x="134.5" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stop Hash (zero is &quot;no stop&quot;)</text>
 <text text-anchor="start" x="125" y="-37.3" font-family="Courier,monospace" font-size="14.00">00000000000000...00000000000000</text>
 <polygon fill="none" stroke="black" stroke-width="2" points="92,-28 92,-243 413,-243 413,-28 92,-28"/>
 </g>
