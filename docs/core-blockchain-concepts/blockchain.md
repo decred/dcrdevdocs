@@ -17,7 +17,7 @@ A block of one or more new transactions (Block 1) is collected into
 the transaction data part of a block. These transactions are then
 hashed and rehashed to create the [merkle root](../developer-guides/merkle-root-construction.md).
 
-The [block header](https://docs.decred.org/advanced/block-header-specifications/)
+The [block header](../developer-guides/block-header-specifications.md)
 contains metadata about the block, including
 the merkle root and hash of the previous block header.
 Including the hash of the previous block header makes it impossible to change

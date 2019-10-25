@@ -62,6 +62,7 @@ nav:
     - 'Transaction Extensions': 'developer-guides/transactions/transaction-extensions.md'
   - 'Addresses': 'developer-guides/addresses.md'
   - 'Blockchain Parameters': 'developer-guides/blockchain-parameters.md'
+  - 'Block Header Specifications': 'developer-guides/block-header-specifications.md'
   - 'Script Extensions': 'developer-guides/script-extensions.md'
   - 'Merkle Root Construction': 'developer-guides/merkle-root-construction.md'
   - 'Lottery Selection Semantics': 'developer-guides/lottery-selection-semantics.md'
