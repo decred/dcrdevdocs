@@ -2,14 +2,14 @@
 
 ---
 
-This page explains what merkle trees are, how Decred uses them and provides step-by-step instructions for constructing compliant Merkle trees.
+This page explains what Merkle trees are, how Decred uses them, and provides step-by-step instructions for constructing compliant Merkle trees.
 
 ### Merkle Trees
 
 
-A merkle tree is a data structure that can be used to store hashes of arbitrary data. In the context of Decred, this might be transaction or ticket data. 
+A Merkle tree is a data structure that can be used to store hashes of arbitrary data. In the context of Decred, this might be transaction or ticket data. 
 
-Merkle trees are created by repeatedly hashing pairs of nodes until there is only one hash left, the Merkle Root. They are constructed from the bottom up, from hashes of the leaf nodes (hashes of the raw input data). The diagram below shows a merkle root constructed from eight leaf nodes. 
+Merkle trees are created by repeatedly hashing pairs of nodes until there is only one hash left, the Merkle Root. They are constructed from the bottom up, from hashes of the leaf nodes (hashes of the raw input data). The diagram below shows a Merkle root constructed from eight leaf nodes. 
 
 ![Merkle Tree](/img/core-blockchain-concepts/merkle_tree.svg)
 
@@ -18,9 +18,9 @@ Merkle trees are particularly useful for blockchains, as they efficiently and co
 
 ### Merkle Trees in Decred
 
-Merkle roots are used to create compact summaries of all transactions in a block. These merkle roots can then be queried to quickly and efficiently verify whether or not a a transaction is included in a block. 
+Merkle roots are used to create compact summaries of all transactions in a block. These Merkle roots can then be queried to quickly and efficiently verify whether or not a transaction is included in a block. 
 
-The block header of each block contains the merkle roots of two merkle trees, the `MerkleRoot` tree and `StakeRoot` tree. The `MerkleRoot` tree contains hashes of all regular transaction IDs. The `StakeRoot` tree contains hashes of stake-based transaction IDs (ticket purchases, votes, revocations, etc.). 
+Each block header contains the Merkle roots of two Merkle trees, the `MerkleRoot` tree and `StakeRoot` tree. The `MerkleRoot` tree contains hashes of all regular transaction IDs. The `StakeRoot` tree contains hashes of stake-based transaction IDs (ticket purchases, votes, revocations, etc.). 
 
 #### Hash Function
 
@@ -37,11 +37,13 @@ All Merkle trees **must** be constructed according to the unique Merkle tree con
 	- Combine each pair of adjacent entries with the BLAKE-256 hash of the two entries concatenated together. The list will have ceil(N/2) entries remaining after combining the adjacent entries
 1. Return the final remaining item in the list as the Merkle root
 
+!!! warning "Warning"
+	The requirement for duplicating the final hash for internal tree levels that have an odd number of nodes must be carefully considered by applications making use of the resulting Merkle root because it means the final calculated Merkle root for a tree that internally duplicated a hash and one that actually included a duplicate hash at that position will be indistinguishable.
+
 The below diagram illustrates these steps.
 
 ![Merkle Tree Calculation](/img/core-blockchain-concepts/merkle_root_calc.svg)
 
-!!! warning "Warning"
-	The requirement for duplicating the final hash for internal tree levels that have an odd number of nodes must be carefully considered by applications making use of the resulting Merkle root because it means the final calculated Merkle root for a tree that internally duplicated a hash and one that actually included a duplicate hash at that position will be indistinguishable.
+
 
 
