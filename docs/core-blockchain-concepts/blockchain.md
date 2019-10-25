@@ -2,8 +2,6 @@
 
 ---
 
-## Introduction
-
 The blockchain is a chain of blocks that full nodes have reached
 consensus on. To reach consensus, full nodes must verify that
 nodes it connects to have the same blocks in their copy of the

@@ -17,7 +17,7 @@
 </g>
 <!-- getblocks -->
 <g id="node2" class="node"><title>getblocks</title>
-<text text-anchor="start" x="179" y="-253.3" font-family="Sans" font-weight="bold" font-size="14.00">GetBlocks Message</text>
+<text text-anchor="start" x="179" y="-253.3" font-family="Sans" font-weight="bold" font-size="14.00">getblocks Message</text>
 <text text-anchor="start" x="200" y="-230.3" font-family="Sans" font-style="italic" font-size="14.00">Message Header</text>
 <polygon fill="none" stroke="black" points="100,-187.5 100,-221.5 186,-221.5 186,-187.5 100,-187.5"/>
 <text text-anchor="start" x="103" y="-208.3" font-family="Sans" font-style="italic" font-size="14.00">Start String</text>
@@ -39,12 +39,12 @@
 <text text-anchor="start" x="275" y="-151.3" font-family="Sans" font-style="italic" font-size="14.00">Header Hash Count</text>
 <text text-anchor="start" x="334.5" y="-137.3" font-family="Courier,monospace" font-size="14.00">20</text>
 <polygon fill="none" stroke="black" points="100,-66.5 100,-128.5 415,-128.5 415,-66.5 100,-66.5"/>
-<text text-anchor="start" x="128" y="-115.3" font-family="Sans" font-style="italic" font-size="14.00">Header Hashes (Highest&#45;Height First)</text>
+<text text-anchor="start" x="128" y="-115.3" font-family="Sans" font-style="italic" font-size="14.00">Header Hashes (highest&#45;height first)</text>
 <text text-anchor="start" x="129.5" y="-101.3" font-family="Courier,monospace" font-size="14.00">db773c8f3b90ef...64f64f00000000</text>
 <text text-anchor="start" x="129.5" y="-87.3" font-family="Courier,monospace" font-size="14.00">459f16a1c695d0...f66d8000000000</text>
 <text text-anchor="start" x="148" y="-73.3" font-family="Sans" font-style="italic" font-size="14.00">......18 more header hashes......</text>
 <polygon fill="none" stroke="black" points="100,-30.5 100,-64.5 415,-64.5 415,-30.5 100,-30.5"/>
-<text text-anchor="start" x="139" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stop Hash (Zero Is &quot;No Stop&quot;)</text>
+<text text-anchor="start" x="139" y="-51.3" font-family="Sans" font-style="italic" font-size="14.00">Stop Hash (zero is &quot;no stop&quot;)</text>
 <text text-anchor="start" x="129.5" y="-37.3" font-family="Courier,monospace" font-size="14.00">00000000000000...00000000000000</text>
 <polygon fill="none" stroke="black" stroke-width="2" points="96.5,-28 96.5,-271 417.5,-271 417.5,-28 96.5,-28"/>
 </g>

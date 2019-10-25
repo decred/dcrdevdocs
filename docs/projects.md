@@ -152,7 +152,7 @@ Everything needed to create wallets to send and receive DCR.
 ## Documentation
 
 - [decred/dcrdocs](https://github.com/decred/dcrdocs) (Markdown, mkdocs)
-- [jholdstock/dcrdevdocs](https://github.com/jholdstock/dcrdevdocs) (Markdown, mkdocs)
+- [decred/dcrdevdocs](https://github.com/decred/dcrdevdocs) (Markdown, mkdocs)
 
 Decred has two sources of documentation. dcrdocs is user documentation,
 focused on explaining Decred at a high level and how to use the software.
