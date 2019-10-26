@@ -28,11 +28,6 @@ dcrwallet is the daemon that handles Decred wallet functionality for a single us
 It tracks balances across addresses, allows stakeholders to participate in Proof-of-Stake voting,
 and manages all of your accounts, addresses, and transactions.
 
-dcrwallet can operate in two distinct modes.
-The first (and default) is to communicate with a single trusted dcrd instance using JSON-RPC.
-The second is a privacy-preserving
-[Simplified Payment Verification (SPV)](https://docs.decred.org/wallets/spv/).
-
 ---
 
 ## decrediton
