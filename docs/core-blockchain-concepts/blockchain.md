@@ -13,11 +13,11 @@ Below is a high-level diagram of the Decred blockchain.
 
 A block of one or more new transactions (Block 1) is collected into
 the transaction data part of a block. These transactions are then
-hashed and rehashed to create the [merkle root](../developer-guides/merkle-root-construction.md).
+hashed and rehashed to create the [Merkle root](../developer-guides/merkle-root-construction.md).
 
 The [block header](../developer-guides/block-header-specifications.md)
 contains metadata about the block, including
-the merkle root and hash of the previous block header.
+the Merkle root and hash of the previous block header.
 Including the hash of the previous block header makes it impossible to change
 a transaction in a block without also modifying all subsequent blocks
 in the chain.

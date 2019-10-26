@@ -97,7 +97,7 @@ inspired by the work of Peter Todd’s
 [OpenTimestamps](https://petertodd.org/2016/opentimestamps-announcement).
 dcrtime allows a nearly unlimited number of hashes
 to be timestamped onchain with the inclusion of a
-single merkle root in a transaction.
+single Merkle root in a transaction.
 
 dcrtimegui implements a front-end for dcrtime,
 enabling files to be timestamped through a web-browser.
