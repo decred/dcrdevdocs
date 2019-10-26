@@ -55,6 +55,9 @@ nav:
     - 'Transactions': 'developer-guides/transactions/transactions.md'
     - 'Transaction Format': 'developer-guides/transactions/transaction-format.md' 
     - 'Transaction Extensions': 'developer-guides/transactions/transaction-extensions.md'
+  - Wallets:
+    - 'Overview': 'developer-guides/wallets/overview.md'
+    - 'Deterministic Wallet Formats': 'developer-guides/wallets/deterministic-wallet-formats.md'
   - 'Addresses': 'developer-guides/addresses.md'
   - 'Blockchain Parameters': 'developer-guides/blockchain-parameters.md'
   - 'Block Header Specifications': 'developer-guides/block-header-specifications.md'
