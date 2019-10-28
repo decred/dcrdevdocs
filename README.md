@@ -1,10 +1,8 @@
-# dcrdevdocs
+dcrdevdocs
+==========
 
-[![Build Status](https://travis-ci.org/decred/dcrdevdocs.png?branch=master)](https://travis-ci.org/decred/dcrdevdocs)
-[![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
-
-**Temporary notice: dcrdevdocs is not yet hosted on the decred.org domain.
-A sample can be viewed at <https://devdocs.jamieholdstock.com>.**
+[![Build Status](https://github.com/decred/dcrdevdocs/workflows/Build%20and%20Test/badge.svg)](https://github.com/decred/dcrdevdocs/actions)
+[![ISC License](https://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 
 `dcrdevdocs` is source code for the [Decred Developers documentation](https://devdocs.decred.org).
 
