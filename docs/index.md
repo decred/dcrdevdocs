@@ -11,10 +11,10 @@ and guidelines for contributing.
 Note that Decred's documentation is, like the project, decentralized. This
 site aims to present all the documentation relevent to all projects. However
 important documentation for some projects lives on GitHub, where developers
-working on the project can more easily maintian it. For instance, much of the
+working on the project can more easily maintain it. For instance, much of the
 documentation for dcrd, Decred's node daemon, lives at [dcrd/docs](https://github.com/decred/dcrd/tree/master/docs).
 
-User documentation can be found [here](https://docs.decred.org).
+User documentation can be found at [docs.decred.org](https://docs.decred.org).
 
 If you have ideas for making the developer documentation better, feel free
 to [contribute](https://github.com/decred/dcrdevdocs)!
