@@ -10,6 +10,9 @@ mining software or wallets, whereas regnet is intended for unit tests, RPC
 server tests and consensus rule tests. Regnet is not intended to be used outside
 of these contexts.
 
+As regnet is a private, temporary network for personal use, there are no public
+block explorers or faucets available.
+
 Regnet can be enabled simply by starting `dcrd` with the `--regnet` flag.
 
 Regnet is almost the same as simnet but there are differences to consider.
