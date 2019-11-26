@@ -11,8 +11,8 @@ periodically reset to help keep a manageable blockchain file size.
 
 Special rules apply to testnet in order to make it easier to work with.
 For example, if no blocks are found on testnet in a 10 minute period, the PoW
-difficulty will drop so that a block can be generated using the dcrd `generate`
-RPC.
+difficulty will drop so that a block can be generated using the dcrd generate
+RPC, as shown below:
 
 ```no-highlight
 dcrctl --testnet generate 1

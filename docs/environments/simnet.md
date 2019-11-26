@@ -6,7 +6,7 @@ When developing Decred applications or testing potential changes, it is often ex
 In order to facilitate these scenarios, dcrd provides a simulation network (`--simnet`), where the difficulty starts extremely low to enable fast CPU mining of blocks.
 Simnet also has some modified functionality that helps developers avoid common issues early in development.
 
-As simnet is a private, temporary network for personal use, there are no public
+As simnet is a temporary network for private use, there are no public
 block explorers or faucets available.
 
 ---
