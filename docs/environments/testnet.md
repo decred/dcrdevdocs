@@ -9,12 +9,24 @@ test new applications and experiment without risk before moving onto mainnet.
 Decred is currently on its 3rd testnet, also known as testnet3. Testnets are
 periodically reset to help keep a manageable blockchain file size.
 
+Special rules apply to testnet in order to make it easier to work with.
+For example, if no blocks are found on testnet in a 10 minute period, the PoW
+difficulty will drop so that a block can be generated using the dcrd generate
+RPC, as shown below:
+
+```no-highlight
+dcrctl --testnet generate 1
+```
+
+This allows developers to work on testnet even if they lack PoW mining hardware.
+
+---
+
 ## How to Run a Testnet Node
 
-Running a testnet3 node is incredibly easy. Your application of choice will need
-to download the testnet3 blockchain, and you will need to create a new wallet
-file for testnet3 use. Your mainnet blockchain and wallet files will remain
-untouched.
+To use testnet, your application of choice will need to download the testnet
+blockchain and you will need to create a new wallet file for testnet.
+Your mainnet blockchain and wallet files will remain untouched.
 
 ### Decrediton
 
@@ -53,8 +65,8 @@ listed at the bottom of that page when you're done playing with the testnet.
 
 ## Testnet Block Explorer
 
-A testnet instance of [dcrdata](https://github.com/decred/dcrdata) is available for public
-use at <https://testnet.dcrdata.org/>.
+A testnet instance of [dcrdata](https://github.com/decred/dcrdata) is available
+for public use at <https://testnet.dcrdata.org/>.
 
 ---
 
