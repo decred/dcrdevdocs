@@ -67,12 +67,13 @@ The following is a command reference to get going:
 
   `$ dcrd --simnet --rpcuser=<username> --rpcpass=<password> --miningaddr=<S....>`
 
-* Instruct dcrd to generate enough initial blocks for the first coinbase to mature:
+* Instruct dcrd to generate enough initial blocks for the first coinbase to mature. Generate genesis block, first mining block with coinbase then more 16 for confirmations:
 
-  `$ dcrctl --simnet --rpcuser=<username> --rpcpass=<password> generate 100`
+  `$ dcrctl --simnet --rpcuser=<username> --rpcpass=<password> generate 18`
 
 * Check the wallet balance to ensure the coins are available:
 
   `$ dcrctl --simnet --wallet --rpcuser=<username> --rpcpass=<password> getbalance`
 
 At this point, there is a fully functional private simnet with coins available to send to other simnet addresses.  Any time one or more transactions are sent, a `generate 1` RPC must be issued to mine a new block with the transactions included.
+
