@@ -1,5 +1,5 @@
 # Build image
-FROM python:3.7
+FROM python:3.8
 
 LABEL description="dcrdevdocs build"
 LABEL version="1.0"
