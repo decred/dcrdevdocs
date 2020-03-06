@@ -12,15 +12,20 @@ dcrdevdocs
 
 #### Install Python
 
-In order to develop on `dcrdevdocs` you will need [Python](https://www.python.org/) installed on your system. Version 3.7 is recommended because this is the version used by the live site, however MkDocs does also support versions 2.7, 3.4, 3.5 and 3.6.
+In order to develop on `dcrdocs` you will need [Python](https://www.python.org/)
+installed on your system.
+Version 3.8 is recommended because this is the version used by the live site,
+however MkDocs does also support versions 3.5 and later.
+Python 2 is not supported.
 
-You can verify your installation of Python by checking the output from these two commands:
+You can verify your installation of Python by checking the output from these two
+commands:
 
 ```bash
 $ python --version
-Python 3.7.0
+Python 3.8.2
 $ pip --version
-pip 18.0
+pip 20.0.2
 ```
 
 #### Install dependencies
@@ -28,7 +33,7 @@ pip 18.0
 To install MkDocs and all of the other Python libraries required by `dcrdevdocs`:
 
 ```bash
-$ pip install --user -r requirements.txt
+$ pip install mkdocs && pip install --user -r requirements.txt
 ```
 
 #### Getting started
