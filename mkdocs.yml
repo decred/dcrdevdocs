@@ -57,6 +57,7 @@ nav:
     - 'Transaction Extensions': 'developer-guides/transactions/transaction-extensions.md'
   - Wallets:
     - 'Overview': 'developer-guides/wallets/overview.md'
+    - 'Seed Generation Process': 'developer-guides/wallets/mnemonic-seed.md'
     - 'Deterministic Wallet Formats': 'developer-guides/wallets/deterministic-wallet-formats.md'
   - 'Addresses': 'developer-guides/addresses.md'
   - 'Blockchain Parameters': 'developer-guides/blockchain-parameters.md'
