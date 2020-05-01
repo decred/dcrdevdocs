@@ -30,6 +30,19 @@ and manages all of your accounts, addresses, and transactions.
 
 ---
 
+## dcrctl
+
+- [decred/dcrctl](https://github.com/decred/dcrctl) (Go)
+
+dcrctl is a command-line client for interacting with the JSON-RPC servers of
+dcrd and dcrwallet.
+
+dcrctl is not a daemon like dcrd or dcrwallet, it is an interactive tool which
+calls the requested RPC method, prints the response and then terminates. It is
+the primary method for CLI users to interact with their personal node and wallet.
+
+---
+
 ## decrediton
 
 - [decred/decrediton](https://github.com/decred/decrediton) (Node.js)
