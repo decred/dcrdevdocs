@@ -40,7 +40,7 @@ p img.dcr-icon {
 }
 
 @media only screen and (max-width: 76.1875em){
-    html .md-nav--primary .md-nav__title--site {
+    .md-nav--primary .md-nav__title[for=__drawer] {
     	background-color: #2970FF;
     }
     .md-nav__source {
@@ -63,7 +63,8 @@ details .md-typeset__scrollwrap {
 details .md-typeset__table {
     padding: 1.6em 0 !important;
 }
-details .md-typeset__table code{
+
+.md-typeset__table code{
     white-space: nowrap;
 }
 

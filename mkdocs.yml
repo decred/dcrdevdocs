@@ -83,4 +83,4 @@ nav:
   - 'Regnet': 'environments/regnet.md'
 - Contributing:
   - 'Contributor Guidelines': 'contributing/contributor-guidelines.md'
-copyright: If you wish to improve this site, please <a href="https://github.com/decred/dcrdevdocs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/decred/dcrdevdocs/compare"><i class="fa fa-github"></i> send a pull request</a>.<br>dcrdevdocs v0.0.1. Decred Project 2019.
+copyright: If you wish to improve this site, please <a href="https://github.com/decred/dcrdevdocs/issues/new">open an issue</a> or <a href="https://github.com/decred/dcrdevdocs/compare">send a pull request</a>.<br>dcrdevdocs v0.0.1. Decred Project 2019.
