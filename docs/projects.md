@@ -119,8 +119,8 @@ enabling files to be timestamped through a web-browser.
 
 ## Mobile Wallets
 
-- [raedahgroup/dcrios](https://github.com/raedahgroup/dcrios) (Swift)
-- [decred/dcrandroid](https://github.com/decred/dcrandroid) (Java, Kotlin)
+- [planetdecred/dcrios](https://github.com/planetdecred/dcrios) (Swift)
+- [planetdecred/dcrandroid](https://github.com/planetdecred/dcrandroid) (Java, Kotlin)
 
 Native wallets for both iOS and Android.
 
