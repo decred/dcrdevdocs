@@ -126,15 +126,17 @@ Native wallets for both iOS and Android.
 
 ---
 
-## dcrstakepool
+## vspd
 
-- [decred/dcrstakepool](https://github.com/decred/dcrstakepool) (Go)
+- [decred/vspd](https://github.com/decred/vspd) (Go)
 
-dcrstakepool is the reference implementation for a Decred Voting Service Provider
-(VSP).
-It consists of two major components: a back-end voting daemon which remains online
-24/7 and votes on behalf of users, and a front-end website which allows users to
-register and manage their accounts.
+vspd is the reference implementation for a Decred Voting Service Provider (VSP).
+A VSP maintains a pool of always-online voting wallets and allows Decred
+stakeholders to delegate the voting of their tickets to these wallets.
+
+[Announced](https://blog.decred.org/2020/06/02/A-More-Private-Way-to-Stake/) in
+June 2020, vspd is a direct replacement for the previous VSP implementation
+[dcrstakepool](https://github.com/decred/dcrstakepool).
 
 ---
 
@@ -184,3 +186,15 @@ The cspp repository contains both the client and the server implementations.
 
 Decred stakeholders [voted to approve](https://proposals.decred.org/proposals/417607aaedff2942ff3701cdb4eff76637eca4ed7f7ba816e5c0bd2e971602e1)
 funding to develop a new kind of decentralized cryptocurrency exchange.
+
+---
+
+## dcrros
+
+- [decred/dcrros](https://github.com/decred/dcrros) (Go)
+
+dcrros (Decred/Rosetta) is a middleware service that provides access to the
+Decred network via a [Rosetta-compatible API](https://www.rosetta-api.org/).
+
+dcrros works as an API conversion layer and cache for the data required by
+Rosetta implementations.
