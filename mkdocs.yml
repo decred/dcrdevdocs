@@ -7,10 +7,10 @@ theme:
   features:
     - instant
   icon:
-    repo: octicons/mark-github
+    repo: octicons/mark-github-16
 extra:
   social:
-    - icon: octicons/mark-github
+    - icon: octicons/mark-github-16
       link: https://github.com/decred
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/decredproject
