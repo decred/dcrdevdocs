@@ -3,6 +3,8 @@
 All projects listed on this page are currently in active development.
 All projects are open source with their source code available on GitHub.
 New contributors are welcome to contribute to any of these projects.
+Further details for each project can be found in the README files of each GitHub
+repository.
 
 ---
 
@@ -15,8 +17,6 @@ dcrd is a full node implementation of Decred written in Go (golang).
 It acts as a fully-validating chain daemon for the Decred cryptocurrency.
 dcrd maintains the entire past transactional ledger of Decred and allows relaying
 of transactions to other Decred nodes around the world.
-The software was originally forked from [btcd](https://github.com/btcsuite/btcd),
-which is a bitcoin full node implementation that is still under active development.
 
 ---
 
@@ -73,6 +73,9 @@ lightning-onion is a Decred implementation of the onion routing protocol used by
 - [decred/dcrdata](https://github.com/decred/dcrdata) (Go)
 
 dcrdata is a Decred block explorer, implemented from scratch by the Decred project.
+The backend and middleware are written in Go.
+On the front end, Webpack enables the use of modern javascript features, as well
+as SCSS for styling.
 
 ---
 
@@ -80,8 +83,10 @@ dcrdata is a Decred block explorer, implemented from scratch by the Decred proje
 
 - [decred/atomicswap](https://github.com/decred/atomicswap) (Go)
 
-The atomicswap repository contains utilities to manually perform cross-chain atomic
-swaps between various supported pairs of cryptocurrencies.
+The atomicswap repository contains utilities to manually perform cross-chain
+atomic swaps between various supported pairs of cryptocurrencies.
+Pull requests implementing support for additional cryptocurrencies and wallets
+are encouraged.
 
 ---
 
@@ -89,14 +94,14 @@ swaps between various supported pairs of cryptocurrencies.
 
 - [decred/politeia](https://github.com/decred/politeia) (Go)
 - [decred/politeiagui](https://github.com/decred/politeiagui) (Go)
-- [decred/snew-classic-ui](https://github.com/decred/snew-classic-ui) (Go)
+- [decred/pi-ui](https://github.com/decred/pi-ui) (React)
 
 Politeia is Decred's solution for decentralized governance.
 [decred/politeia](https://github.com/decred/politeia) implements
 a time-stamped and versioned data store based on git,
 and this is used as the back-end for Politeia.
 The front-end is implemented in [decred/politeiagui](https://github.com/decred/politeiagui)
-and [decred/snew-classic-ui](https://github.com/decred/snew-classic-ui).
+and [decred/pi-ui](https://github.com/decred/pi-ui).
 
 ---
 
@@ -123,6 +128,8 @@ enabling files to be timestamped through a web-browser.
 - [planetdecred/dcrandroid](https://github.com/planetdecred/dcrandroid) (Java, Kotlin)
 
 Native wallets for both iOS and Android.
+These wallets make use of [dcrwallet](#dcrwallet) in SPV mode to ensure they
+have a light footprint on mobile devices.
 
 ---
 
@@ -146,6 +153,7 @@ June 2020, vspd is a direct replacement for the previous VSP implementation
 
 dcrpool is a lightweight Proof-of-Work (PoW) mining pool which operates
 without collecting any personal information from its users.
+dcrpool currently supports a variety of the most popular blake-256 ASICs.
 
 ---
 
@@ -184,8 +192,13 @@ The cspp repository contains both the client and the server implementations.
 
 - [decred/dcrdex](https://github.com/decred/dcrdex) (Go)
 
-Decred stakeholders [voted to approve](https://proposals.decred.org/proposals/417607aaedff2942ff3701cdb4eff76637eca4ed7f7ba816e5c0bd2e971602e1)
+In 2019 the Decred stakeholders
+[voted to approve](https://proposals.decred.org/proposals/417607aaedff2942ff3701cdb4eff76637eca4ed7f7ba816e5c0bd2e971602e1)
 funding to develop a new kind of decentralized cryptocurrency exchange.
+dcrdex makes use of [atomic swaps](#atomicswap) to enable cryptocurrency trading
+in a completely trustless, peer-to-peer fashion.
+dcrdex does not collect any trading fees, and does not attempt to replace
+traditional centralized exchanges with a new blockchain or token.
 
 ---
 
@@ -195,6 +208,5 @@ funding to develop a new kind of decentralized cryptocurrency exchange.
 
 dcrros (Decred/Rosetta) is a middleware service that provides access to the
 Decred network via a [Rosetta-compatible API](https://www.rosetta-api.org/).
-
 dcrros works as an API conversion layer and cache for the data required by
 Rosetta implementations.
