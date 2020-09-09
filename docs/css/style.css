@@ -67,6 +67,11 @@ details .md-typeset__table code{
     white-space: nowrap;
 }
 
+/* Don't wrap opcode names onto multiple lines in txscript.md */
+.md-typeset__table code{
+    white-space: nowrap;
+}
+
 .md-typeset table:not([class]) th{
     background-color: #EDEFF1;
     font-size: 13px;

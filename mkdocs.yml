@@ -61,6 +61,9 @@ nav:
     - 'Transactions': 'developer-guides/transactions/transactions.md'
     - 'Transaction Format': 'developer-guides/transactions/transaction-format.md' 
     - 'Transaction Extensions': 'developer-guides/transactions/transaction-extensions.md'
+    - txscript:
+      - "Overview": 'developer-guides/transactions/txscript/overview.md'
+      - "Opcodes": 'developer-guides/transactions/txscript/opcodes.md'
   - Wallets:
     - 'Overview': 'developer-guides/wallets/overview.md'
     - 'Seed Generation Process': 'developer-guides/wallets/mnemonic-seed.md'
