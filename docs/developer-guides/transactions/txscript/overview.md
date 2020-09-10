@@ -17,8 +17,7 @@ which must be met in order for the recipient of a transaction to spend the
 Decred they have received.
 
 In a simple transfer of Decred from one address to another, the script will
-typically specify just two requirements; in order to spend the received the
-Decred, the recipient must provide:
+typically specify just two requirements:
 
 - a public key that, when hashed, yields the receiving address specified in the
   script
@@ -28,6 +27,23 @@ Decred, the recipient must provide:
 More complex scripts can be constructed requiring multiple private keys, or no
 keys at all, and it is possible to make use of time locks which prevent the
 spending of DCR until some point in the future.
+
+The scripts executed by full nodes while validating transactions in a block or
+before entering the mempool are actually a combination of two or three different
+scripts:
+
+- The _Public Key_ script (`scriptPubKey`) resides in the _previous output_ (the
+  UTXO or in other words, the [output being
+  spent](../transaction-format.md#outputs) by one of
+  the transaction's input).
+
+- The _Signature Script_ (`scriptSig`) is stored in the
+  [input](../transaction-format.md#witness-inputs)
+  being validated.
+
+- The so-called _Redeem Script_ is used in P2SH addresses and is stored as
+  part of the `scriptSig` and has some special rules for being detected and
+  executed.
 
 ---
 

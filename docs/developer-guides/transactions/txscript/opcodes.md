@@ -23,17 +23,17 @@ These opcodes are used to push commonly used constants onto the stack.
 
 ## Flow Control
 
-These opcodes enable conditional logic, as well as allowing scripts to mark
-transactions invalid and stop execution.
+These opcodes enable conditional logic as well as allowing scripts to stop
+execution.
 
 | Word        | Opcode | Hex   | Description |
 |-------------|--------|-------|-------------|
 | `OP_IF`     | 99     | 0x63  | If the top stack value is not False, the statements are executed. The top stack value is removed. |
 | `OP_NOTIF`  | 100    | 0x64  | If the top stack value is False, the statements are executed. The top stack value is removed. |
 | `OP_ELSE`   | 103    | 0x67  | If the preceding OP_IF or OP_NOTIF or OP_ELSE was not executed then these statements are executed, and if the preceding OP_IF or OP_NOTIF or OP_ELSE was executed then these statements are not executed. |
-| `OP_ENDIF`  | 104    | 0x68  | Ends an if/else block. All blocks must end, or the transaction is invalid. An OP_ENDIF without OP_IF earlier is also invalid. |
-| `OP_VERIFY` | 105    | 0x69  | Marks transaction as invalid if top stack value is not true. The top stack value is removed. |
-| `OP_RETURN` | 106    | 0x6a  | Marks transaction as invalid. |
+| `OP_ENDIF`  | 104    | 0x68  | Ends an if/else block. All blocks must end, or script execution fails. An OP_ENDIF without OP_IF earlier is also invalid. |
+| `OP_VERIFY` | 105    | 0x69  | Script execution fails if top stack value is not true. The top stack value is removed. |
+| `OP_RETURN` | 106    | 0x6a  | Script execution fails if executed. |
 
 ## Stack
 
@@ -77,6 +77,8 @@ These opcodes allow a script to perform a limited set of string manipulations.
 
 These opcodes allow scripts to manipulate data by performing bit-level logic
 operations.
+
+Inputs are limited to signed 32-bit integers.
 
 | Word        | Opcode | Hex   | Description |
 |-------------|--------|-------|-------------|
@@ -132,8 +134,8 @@ result of the addition.
 | `OP_MUL`                | 149    | 0x95  | Performs multiplication on the inputs. |
 | `OP_DIV`                | 150    | 0x96  | Performs division on the inputs. |
 | `OP_MOD`                | 151    | 0x97  | Performs modulo on the inputs. |
-| `OP_LSHIFT`             | 152    | 0x98  | Shifts bits left, preserving sign. |
-| `OP_RSHIFT`             | 153    | 0x99  | Shifts bits right, preserving sign. |
+| `OP_LSHIFT`             | 152    | 0x98  | Shifts bits left. Zeros are shifted in on the right. Does not preserve sign. |
+| `OP_RSHIFT`             | 153    | 0x99  | Shifts bits right. Zeros are shifted in on the left. Does not preserve sign. |
 | `OP_BOOLAND`            | 154    | 0x9a  | If both inputs are not 0, the output is 1. Otherwise 0. |
 | `OP_BOOLOR`             | 155    | 0x9b  | If either input is not 0, the output is 1. Otherwise 0. |
 | `OP_NUMEQUAL`           | 156    | 0x9c  | Returns 1 if the input numbers are equal, 0 otherwise. |
@@ -169,7 +171,7 @@ within an unexecuted `OP_IF` branch.
 | `OP_HASH160`             | 169    | 0xa9  | The input is hashed twice: first with BLAKE-256 and then with RIPEMD-160. |
 | `OP_HASH256`             | 170    | 0xaa  | The input is hashed two times with BLAKE-256. |
 | `OP_CODESEPARATOR`       | 171    | 0xab  | All of the signature checking words will only match signatures to the data after the most recently-executed OP_CODESEPARATOR. Disabled. |
-| `OP_CHECKSIG`            | 172    | 0xac  | Consumes a signature and a full public key, and pushes 1 onto the stack if the transaction data specified by the SIGHASH flag was converted into the signature using the same ECDSA private key that generated the public key.  Otherwise, it pushes 0 onto the stack. |
+| `OP_CHECKSIG`            | 172    | 0xac  | Consumes a signature and a full public key, and pushes 1 onto the stack if the transaction data specified by the SIGHASH flag was converted into the signature using the same private key that generated the public key for the given signature type.  Otherwise, it pushes 0 onto the stack. |
 | `OP_CHECKSIGVERIFY`      | 173    | 0xad  | Same as OP_CHECKSIG, but OP_VERIFY is executed afterward. |
 | `OP_CHECKMULTISIG`       | 174    | 0xae  | Compares the first signature against each public key until it finds an ECDSA match. Starting with the subsequent public key, it compares the second signature against each remaining public key until it finds an ECDSA match. The process is repeated until all signatures have been checked or not enough public keys remain to produce a successful result. All signatures need to match a public key. If all signatures are valid, 1 is returned, 0 otherwise. |
 | `OP_CHECKMULTISIGVERIFY` | 175    | 0xaf  | Same as OP_CHECKMULTISIG, but OP_VERIFY is executed afterward. |
@@ -187,12 +189,15 @@ respectively.
 
 | Word                     | Opcode | Hex  | Description |
 |--------------------------|--------|------|-------------|
-| `OP_CHECKLOCKTIMEVERIFY` | 177    | 0xb1 | Marks transaction as invalid if the top stack item is greater than the transaction's nLockTime field, otherwise script evaluation continues as though an OP_NOP was executed. Previously `OP_NOP2`. |
-| `OP_CHECKSEQUENCEVERIFY` | 178    | 0xb2 | Marks transaction as invalid if the relative lock time of the input is not equal to or longer than the value of the top stack item. Previously `OP_NOP3`. |
+| `OP_CHECKLOCKTIMEVERIFY` | 177    | 0xb1 | Script execution fails if the top stack item is greater than the transaction's nLockTime field, otherwise script evaluation continues as though an OP_NOP was executed. Previously `OP_NOP2`. |
+| `OP_CHECKSEQUENCEVERIFY` | 178    | 0xb2 | Script execution fails if the relative lock time of the input is not equal to or longer than the value of the top stack item. Previously `OP_NOP3`. |
 
 ## Proof-of-Stake
 
 These opcodes are used to create Proof-of-Stake transactions.
+
+They are all considered NOPs within the scripting system. Their semantics are
+enforced outside of the scripting system by the staking consensus rules.
 
 | Word             | Opcode | Hex   | Description |
 |------------------|--------|-------|-------------|
@@ -218,16 +223,16 @@ Following the activation of
 
 | Word                              | Opcode    | Hex         | Description |
 |-----------------------------------|-----------|-------------|-------------|
-| `OP_NOP`                          | 97        | 0x61        | Does nothing. Does not mark transaction as invalid. |
-| `OP_NOP1`                         | 176       | 0xb0        | Does nothing. Does not mark transaction as invalid. |
-| `OP_NOP4` - `OP_NOP10`            | 179 - 185 | 0xb3 - 0xb9 | Does nothing. Does not mark transaction as invalid. |
-| `OP_UNKNOWN193` - `OP_UNKNOWN248` | 193 - 248 | 0xc1 - 0xf8 | Does nothing. Does not mark transaction as invalid. |
+| `OP_NOP`                          | 97        | 0x61        | Does nothing. Does not cause script execution to fail. |
+| `OP_NOP1`                         | 176       | 0xb0        | Does nothing. Does not cause script execution to fail. |
+| `OP_NOP4` - `OP_NOP10`            | 179 - 185 | 0xb3 - 0xb9 | Does nothing. Does not cause script execution to fail. |
+| `OP_UNKNOWN193` - `OP_UNKNOWN248` | 193 - 248 | 0xc1 - 0xf8 | Does nothing. Does not cause script execution to fail. |
 
 ## Reserved
 
 | Word          | Opcode | Hex   | Description |
 |---------------|--------|-------|-------------|
-| `OP_RESERVED` | 80     | 0x50  | Transaction is invalid unless occuring in an unexecuted OP_IF branch. |
-| `OP_VER`      | 98     | 0x62  | Transaction is invalid unless occuring in an unexecuted OP_IF branch. |
-| `OP_VERIF`    | 101    | 0x65  | Transaction is invalid even when occuring in an unexecuted OP_IF branch. |
-| `OP_VERNOTIF` | 102    | 0x66  | Transaction is invalid even when occuring in an unexecuted OP_IF branch. |
+| `OP_RESERVED` | 80     | 0x50  | Script execution fails unless occuring in an unexecuted OP_IF branch. |
+| `OP_VER`      | 98     | 0x62  | Script execution fails unless occuring in an unexecuted OP_IF branch. |
+| `OP_VERIF`    | 101    | 0x65  | Script execution fails even when occuring in an unexecuted OP_IF branch. |
+| `OP_VERNOTIF` | 102    | 0x66  | Script execution fails even when occuring in an unexecuted OP_IF branch. |
