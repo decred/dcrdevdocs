@@ -135,7 +135,7 @@ result of the addition.
 | `OP_DIV`                | 150    | 0x96  | Performs division on the inputs. |
 | `OP_MOD`                | 151    | 0x97  | Performs modulo on the inputs. |
 | `OP_LSHIFT`             | 152    | 0x98  | Shifts bits left. Zeros are shifted in on the right. Does not preserve sign. |
-| `OP_RSHIFT`             | 153    | 0x99  | Shifts bits right. Zeros are shifted in on the left. Does not preserve sign. |
+| `OP_RSHIFT`             | 153    | 0x99  | Shifts bits right. Uses sign extension to preserve sign. |
 | `OP_BOOLAND`            | 154    | 0x9a  | If both inputs are not 0, the output is 1. Otherwise 0. |
 | `OP_BOOLOR`             | 155    | 0x9b  | If either input is not 0, the output is 1. Otherwise 0. |
 | `OP_NUMEQUAL`           | 156    | 0x9c  | Returns 1 if the input numbers are equal, 0 otherwise. |
