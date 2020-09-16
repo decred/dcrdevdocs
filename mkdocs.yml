@@ -70,6 +70,7 @@ nav:
   - 'Block Header Specifications': 'developer-guides/block-header-specifications.md'
   - 'Script Extensions': 'developer-guides/script-extensions.md'
   - 'Merkle Root Construction': 'developer-guides/merkle-root-construction.md'
+  - 'Ticket Selection': 'developer-guides/ticket-selection.md'
 - Protocol / Peer-to-Peer (P2P) Network:
   - 'Peer Discovery': 'protocol-p2p-network/peer-discovery.md'
   - 'Initial Block Download': 'protocol-p2p-network/initial-block-download.md'
