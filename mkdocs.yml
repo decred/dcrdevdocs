@@ -1,31 +1,39 @@
 site_name: Decred Developer Documentation
-theme: 
+theme:
   name: material
   favicon: 'img/favicon.ico?v=s3ss'
   logo: 'img/decred_logo_symbol_128.svg'
   font: false
   features:
-    - instant
+    - navigation.instant
   icon:
     repo: octicons/mark-github-16
 extra:
   social:
     - icon: octicons/mark-github-16
       link: https://github.com/decred
+      name: GitHub
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/decredproject
+      name: Twitter
     - icon: fontawesome/brands/medium
       link: https://medium.com/decred
+      name: Medium
     - icon: fontawesome/brands/reddit
       link: https://www.reddit.com/r/decred/
+      name: Reddit
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/decredchannel
+      name: YouTube
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/decredproject/
+      name: LinkedIn
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/decredproject/
+      name: Facebook
     - icon: fontawesome/brands/weibo
       link: https://weibo.com/DecredProject
+      name: Weibo
 repo_url: https://github.com/decred/dcrdevdocs
 repo_name: decred/dcrdevdocs
 markdown_extensions:
@@ -87,4 +95,4 @@ nav:
   - 'Regnet': 'environments/regnet.md'
 - Contributing:
   - 'Contributor Guidelines': 'contributing/contributor-guidelines.md'
-copyright: If you wish to improve this site, please <a href="https://github.com/decred/dcrdevdocs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/decred/dcrdevdocs/compare"><i class="fa fa-github"></i> send a pull request</a>.<br>dcrdevdocs v0.0.1. Decred Project 2019.
+copyright: If you wish to improve this site, please <a href="https://github.com/decred/dcrdevdocs/issues/new">open an issue</a> or <a href="https://github.com/decred/dcrdevdocs/compare">send a pull request</a>.<br />dcrdevdocs v0.0.1. Decred Project 2020.
