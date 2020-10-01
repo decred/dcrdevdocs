@@ -7,7 +7,7 @@ The process of building software from source can be described as
 different conditions, and always yield the same result when given the same
 input.
 The output of a truly deterministic build will be identical down to every
-individual bit, such that equality can be measured using MD5/SHA1 hashes.
+individual bit, such that equality can be measured using SHA256 hashes.
 
 A build process may not be deterministic because a compiler may insert metadata
 into the output, for example, a timestamp field indicating when the build
@@ -55,15 +55,20 @@ on platform) for Decred releases.
 Provided the same version of the Go compiler, it should be possible to use this
 tool on any system to build the Decred binaries deterministically.
 
+Binaries are currently built for a range of target platforms including Windows,
+Linux, and macOS.
+
 The Go compiler does not build deterministic binaries by default, however
 `decred/release` encourages deterministic builds with some parameters.
 
-- `-trimpath` is used to remove all file system paths from compiled executables
-- The `buildid` added by the linker is hard-coded to empty string
-- Local `GOFLAGS` are overwritten to empty string
-- The `netgo` build tag is used to ensure statically linked binaries
-- cgo is disabled with environment variable `CGO_ENABLED` set to `0` to ensure
-  statically linked binaries
+- `-trimpath` is used to remove all file system paths from compiled executables.
+- The `buildid` added by the linker is hard-coded to empty string.
+- Local `GOFLAGS` are overwritten to empty string.
+- cgo is disabled with environment variable `CGO_ENABLED` set to `0`, and the
+  `netgo` build tag are set.
+  These settings ensure that cross-compiled binaries
+  will be identical for each target platform regardless of which platform the
+  build is run on.
 
 Rather than relying upon the build environment to provide archiving tools,
 `decred/release` uses Go packages implementing `tar`/`zip`/`gzip` compression to
