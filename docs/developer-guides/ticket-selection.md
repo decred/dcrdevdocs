@@ -27,7 +27,7 @@ having to trust one another.
 The PRNG used by dcrd to select tickets is named `Hash256PRNG`. It utilizes
 [BLAKE-256](https://docs.decred.org/research/blake-256-hash-function) (a 256-bit
 secure hashing function) to generate unsigned 32 bit integers between zero and a
-specified upper limit, avoiding modulo bias in order to yeild a normal
+specified upper limit, avoiding modulo bias in order to yield a normal
 distribution within the specified range.
 
 ---
