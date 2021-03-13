@@ -8,6 +8,8 @@ LABEL maintainer "holdstockjamie@gmail.com"
 USER root
 WORKDIR /root
 
+RUN python -m pip install --upgrade pip
+
 COPY ./ /root/
 
 RUN pip install mkdocs && \
