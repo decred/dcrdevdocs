@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Pool.svg" /> Memory Pool
+# ![](../img/dcr-icons/Pool.svg){ .dcr-icon } Memory Pool
 
 ---
 

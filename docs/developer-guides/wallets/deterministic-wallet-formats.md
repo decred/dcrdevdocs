@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Wallet.svg" /> Deterministic Wallet Formats
+# ![](../../img/dcr-icons/Wallet.svg){ .dcr-icon } Deterministic Wallet Formats
 
 ---
 

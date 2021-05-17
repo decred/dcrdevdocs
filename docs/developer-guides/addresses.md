@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Address Details
+# ![](../img/dcr-icons/Transactions.svg){ .dcr-icon } Address Details
 
 ---
 

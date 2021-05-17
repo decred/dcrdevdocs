@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Code.svg" /> Merkle Root Construction
+# ![](../img/dcr-icons/Code.svg){ .dcr-icon } Merkle Root Construction
 
 ---
 

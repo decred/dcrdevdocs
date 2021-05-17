@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Code.svg" /> txscript
+# ![](../../../img/dcr-icons/Code.svg){ .dcr-icon } txscript
 
 ---
 

@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Wallet.svg" /> Seed Generation Process
+# ![](../../img/dcr-icons/Wallet.svg){ .dcr-icon } Seed Generation Process
 
 ---
 
