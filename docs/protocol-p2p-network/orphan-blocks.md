@@ -8,7 +8,7 @@ hasn't seen yet. In other words, orphan blocks have no known parent
 (unlike stale blocks, which have known parents but which aren't part of
 the best block chain).
 
-![Difference Between Orphan And Stale Blocks](/img/protocol-p2p-network/en-orphan-stale-definition.svg)
+![Difference Between Orphan And Stale Blocks](../img/protocol-p2p-network/en-orphan-stale-definition.svg)
 
 When dcrd downloads an orphan block, it will not validate
 it. Instead, it will send a `getblocks` message to the node which sent

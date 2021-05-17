@@ -38,4 +38,4 @@ The table below provides the locking script and prefix details for each address 
 
 When hashing a public key to generate an address (e.g. a Pay-to-PubkeyHash (P2PKH) address), Decred uses blake256r14 instead of SHA-256. The full algorithm to create an address is blake256r14+ripemd160+base58, as illustrated below.
 
-![How a P2PKH address is generated](/img/p2pkh_address_gen.svg)
+![How a P2PKH address is generated](../img/p2pkh_address_gen.svg)

@@ -11,7 +11,7 @@ A Merkle tree is a data structure that can be used to store hashes of arbitrary 
 
 Merkle trees are created by repeatedly hashing pairs of nodes until there is only one hash left, the Merkle Root. They are constructed from the bottom up, from hashes of the leaf nodes (hashes of the raw input data). The diagram below shows a Merkle root constructed from eight leaf nodes. 
 
-![Merkle Tree](/img/core-blockchain-concepts/merkle_tree.svg)
+![Merkle Tree](../img/core-blockchain-concepts/merkle_tree.svg)
 
 Merkle trees are particularly useful for blockchains, as they efficiently and compactly summarize larger data sets.
 
@@ -42,7 +42,7 @@ All Merkle trees **must** be constructed according to the unique Merkle tree con
 
 The below diagram illustrates these steps.
 
-![Merkle Tree Calculation](/img/core-blockchain-concepts/merkle_root_calc.svg)
+![Merkle Tree Calculation](../img/core-blockchain-concepts/merkle_root_calc.svg)
 
 
 

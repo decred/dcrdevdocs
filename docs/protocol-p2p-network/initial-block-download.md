@@ -26,7 +26,7 @@ dcrd uses a simple IBD method called *blocks-first*.
 The goal is to download the blocks from the best block chain in sequence.
 Below is a high-level diagram of the blocks-first method.
 
-![Overview Of Blocks-First Method](/img/protocol-p2p-network/en-blocks-first-flowchart.svg)
+![Overview Of Blocks-First Method](../img/protocol-p2p-network/en-blocks-first-flowchart.svg)
 
 The first time a node is started, it only has a single block in its
 local best block chain, the hardcoded genesis block (block 0).
@@ -34,7 +34,7 @@ We will refer to this as the "IBD node".
 This node chooses a remote peer, called the "sync node", and sends it the
 `getblocks` message illustrated below.
 
-![First GetBlocks Message Sent During IBD](/img/protocol-p2p-network/en-ibd-getblocks.svg)
+![First GetBlocks Message Sent During IBD](../img/protocol-p2p-network/en-ibd-getblocks.svg)
 
 In the header hashes field in the payload of the `getblocks` message, this new node
 sends the header hash of the only block it has, the genesis block
@@ -48,7 +48,7 @@ replies with 500 block inventories (the maximum response to a
 `getblocks` message) starting from block 1. It sends these inventories
 in the inventory (`inv`) message illustrated below.
 
-![First Inv Message Sent During IBD](/img/protocol-p2p-network/en-ibd-inv.svg)
+![First Inv Message Sent During IBD](../img/protocol-p2p-network/en-ibd-inv.svg)
 
 Inventories are unique identifiers for information on the network. Each
 inventory contains a type field and the unique identifier for an
@@ -65,7 +65,7 @@ hash of block 1 (4860…0000).
 The IBD node uses the received inventories to request 128 blocks from
 the sync node in the `getdata` message illustrated below.
 
-![First GetData Message Sent During IBD](/img/protocol-p2p-network/en-ibd-getdata.svg)
+![First GetData Message Sent During IBD](../img/protocol-p2p-network/en-ibd-getdata.svg)
 
 It's important to blocks-first nodes that the blocks be requested and
 sent in order because each block header references the header hash of
@@ -79,7 +79,7 @@ of the blocks requested. Each block is put into serialized block format
 and sent in a separate `block` message. The first `block` message sent
 (for block 1) is illustrated below.
 
-![First Block Message Sent During IBD](/img/protocol-p2p-network/en-ibd-block.svg)
+![First Block Message Sent During IBD](../img/protocol-p2p-network/en-ibd-block.svg)
 
 The IBD node downloads each block, validates it, and then requests the
 next block it hasn't requested yet, maintaining a queue of up to 128
@@ -89,7 +89,7 @@ requesting the inventories of up to 500 more blocks.  This second
 `getblocks` message contains multiple header hashes as illustrated
 below:
 
-![Second GetBlocks Message Sent During IBD](/img/protocol-p2p-network/en-ibd-getblocks2.svg)
+![Second GetBlocks Message Sent During IBD](../img/protocol-p2p-network/en-ibd-getblocks2.svg)
 
 Upon receipt of the second `getblocks` message, the sync node searches
 its local best block chain for a block that matches one of the header
