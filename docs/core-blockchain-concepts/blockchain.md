@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Blocks.svg" /> Blockchain
+# ![](../img/dcr-icons/Blocks.svg){ .dcr-icon } Blockchain
 
 ---
 
@@ -9,7 +9,7 @@ chain, and that those blocks conform to the consensus rules.
 
 Below is a high-level diagram of the Decred blockchain.
 
-![Block Chain Overview](/img/core-blockchain-concepts/blockchain-overview.svg)
+![Block Chain Overview](../img/core-blockchain-concepts/blockchain-overview.svg)
 
 A block of one or more new transactions (Block 1) is collected into
 the transaction data part of a block. These transactions are then
@@ -31,7 +31,7 @@ The input of one transaction is the output of a previous transaction.
 Below is a high-level diagram of atoms (the smallest unit of DCR)
 being propagated through a series of transactions.
 
-![Transaction Propagation](/img/core-blockchain-concepts/transaction-propagation.svg)
+![Transaction Propagation](../img/core-blockchain-concepts/transaction-propagation.svg)
 
 A transaction can create multiple outputs.
 However, each output can only be used as an input once.

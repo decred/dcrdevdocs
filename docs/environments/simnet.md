@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Dcrtl.svg" /> Simnet
+# ![](../img/dcr-icons/Dcrtl.svg){ .dcr-icon } Simnet
 
 ---
 
@@ -32,7 +32,7 @@ The following is an overview of the most important properties that distinguish s
 
 ---
 
-## <img class="dcr-icon" src="/img/dcr-icons/AtoB.svg" /> Getting Started
+## ![](../img/dcr-icons/AtoB.svg){ .dcr-icon } Getting Started
 
 Running a single `dcrd` node on simnet is simply starting `dcrd` with the `--simnet` flag.
 However, in order to be really useful, you'll typically want to be able to send coins amongst addresses which implies that blocks will need to be mined and interfacing with a wallet will be needed.

@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Dcrtl.svg" /> Mainnet
+# ![](../img/dcr-icons/Dcrtl.svg){ .dcr-icon } Mainnet
 
 ---
 

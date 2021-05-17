@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transactions Extensions
+# ![](../../img/dcr-icons/Transactions.svg){ .dcr-icon } Transactions Extensions
 
 ---
 
@@ -8,6 +8,6 @@ the only way to remove a transaction from the mempool was to double spend it.
 
 ---
 
-## <img class="dcr-icon" src="/img/dcr-icons/Sources.svg" /> References
+## ![](../../img/dcr-icons/Sources.svg){ .dcr-icon } References
 
 [^1]: ByteCoin. 2010. [Need OP_BLOCKNUMBER to allow "time" limited transactions](https://decred.org/research/bytecoin2010.pdf).

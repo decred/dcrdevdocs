@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Blocks.svg" /> Blockchain Parameters
+# ![](../img/dcr-icons/Blocks.svg){ .dcr-icon } Blockchain Parameters
 
 ---
 

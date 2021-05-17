@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Code.svg" /> txscript
+# ![](../../../img/dcr-icons/Code.svg){ .dcr-icon } txscript
 
 ---
 
@@ -71,22 +71,22 @@ just uses some small integers.
 This script contains five instructions, which will be executed as follows:
 
 1. The value 6 is pushed onto the stack
-  ![Simple addition step 1](/img/txscript/addition-1.png)
+  ![Simple addition step 1](../../../img/txscript/addition-1.png)
 
 1. The value 5 is pushed onto the stack
-  ![Simple addition step 2](/img/txscript/addition-2.png)
+  ![Simple addition step 2](../../../img/txscript/addition-2.png)
 
 1. `OP_ADD` pops the top two values from the stack, adds them together, and pushes
    the result, 11, onto the stack
-  ![Simple addition step 3](/img/txscript/addition-3.png)
+  ![Simple addition step 3](../../../img/txscript/addition-3.png)
 
 1. The value 12 is pushed onto the stack
-  ![Simple addition step 4](/img/txscript/addition-4.png)
+  ![Simple addition step 4](../../../img/txscript/addition-4.png)
 
 1. `OP_EQUAL` pops the top two values from the stack, compares them, and pushes 0
    (false) onto the stack. If the values were equal, 1 (true) would be pushed
    instead.
-  ![Simple addition step 5](/img/txscript/addition-5.png)
+  ![Simple addition step 5](../../../img/txscript/addition-5.png)
 
 ---
 

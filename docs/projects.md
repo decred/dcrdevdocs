@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Info.svg" /> Projects
+# ![](img/dcr-icons/Info.svg){ .dcr-icon } Projects
 
 All projects listed on this page are currently in active development.
 All projects are open source with their source code available on GitHub.

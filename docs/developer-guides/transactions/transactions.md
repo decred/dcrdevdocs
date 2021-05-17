@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Transactions.svg" /> Transactions
+# ![](../../img/dcr-icons/Transactions.svg){ .dcr-icon } Transactions
 
 ---
 
