@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Dcrtl.svg" /> Testnet
+# ![](../img/dcr-icons/Dcrtl.svg){ .dcr-icon } Testnet
 
 ---
 

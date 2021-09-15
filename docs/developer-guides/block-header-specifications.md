@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/BlockHeader.svg" /> Block Header Specifications
+# ![](../img/dcr-icons/BlockHeader.svg){ .dcr-icon } Block Header Specifications
 
 ---
 

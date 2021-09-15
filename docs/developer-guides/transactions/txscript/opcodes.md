@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/Code.svg" /> Opcodes
+# ![](../../../img/dcr-icons/Code.svg){ .dcr-icon } Opcodes
 
 The complete txscript language includes over 100 operation codes, or opcodes,
 however only a small number of these are used in the vast majority of the

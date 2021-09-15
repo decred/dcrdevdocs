@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/TicketLive.svg" /> Stake Enabled Height
+# ![](../../img/dcr-icons/TicketLive.svg){ .dcr-icon } Stake Enabled Height
 
 ---
 

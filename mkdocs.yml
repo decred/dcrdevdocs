@@ -65,6 +65,7 @@ markdown_extensions:
   - markdown.extensions.toc:
       permalink: True
   - markdown.extensions.tables
+  - markdown.extensions.attr_list
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji

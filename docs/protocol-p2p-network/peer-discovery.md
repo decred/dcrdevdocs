@@ -1,4 +1,4 @@
-# <img class="dcr-icon" src="/img/dcr-icons/AtoB.svg" /> Peer Discovery
+# ![](../img/dcr-icons/AtoB.svg){ .dcr-icon } Peer Discovery
 
 ---
 
