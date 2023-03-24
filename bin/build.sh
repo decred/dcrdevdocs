@@ -1,13 +1,21 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
 # Requires docker 17.05 or higher
 
+set -e
+
 echo ""
-echo "================================="
+echo "===================================="
 echo "  Building dcrdevdocs docker image  "
-echo "================================="
+echo "===================================="
 echo ""
 
-docker build -t decred/dcrdevdocs .
+IMAGE_NAME=decred/dcrdevdocs
+
+if [ "$1" != "" ]; then
+    IMAGE_NAME=$1
+fi
+
+docker build -t $IMAGE_NAME .
 
 echo ""
 echo "==================="
@@ -15,5 +23,5 @@ echo "  Build complete"
 echo "==================="
 echo ""
 echo "You can now run dcrdevdocs with the following command:"
-echo "    docker run -d --rm -p <local port>:80 decred/dcrdevdocs:latest"
+echo "    docker run -d --rm -p <local port>:80 $IMAGE_NAME:latest"
 echo ""

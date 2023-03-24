@@ -18,7 +18,7 @@ RUN pip install mkdocs && \
 RUN ./bin/build_docs.sh
 
 # Serve image (stable nginx version)
-FROM nginx:1.22
+FROM nginx:1.22-alpine
 
 LABEL description="dcrdevdocs serve"
 LABEL version="1.0"
