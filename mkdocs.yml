@@ -1,5 +1,15 @@
 site_name: Decred Developer Documentation
+site_url: https://devdocs.decred.org
 use_directory_urls: true
+validation:
+  # Increase severity of validation rules to trigger build failures on common mistakes.
+  absolute_links: warn
+  unrecognized_links: warn
+  nav:
+    omitted_files: warn
+    absolute_links: warn
+watch:
+  - "docs"
 theme:
   name: material
   favicon: 'img/favicon.ico?v=s3ss'
@@ -68,14 +78,20 @@ markdown_extensions:
   - attr_list
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra_css:
   - css/fonts.css
   - css/style.css
 plugins:
   - markdownextradata
   - search
+  - social:
+      enabled: !ENV [DCRDEVDOCS_CARDS, false]
+      cards_layout_options:
+        font_family: 'Source Sans 3'
+        background_color: '#091440'
+        color: '#FFFFFF'
 nav:
 - 'Home': 'index.md'
 - 'Projects': 'projects.md'
