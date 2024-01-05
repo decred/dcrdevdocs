@@ -3,7 +3,7 @@ FROM python:3.11
 
 LABEL description="dcrdevdocs build"
 LABEL version="1.0"
-LABEL maintainer "holdstockjamie@gmail.com"
+LABEL maintainer "jholdstock@decred.org"
 
 USER root
 WORKDIR /root
@@ -15,14 +15,22 @@ COPY ./ /root/
 RUN pip install mkdocs && \
 	pip install --user -r requirements.txt
 
+# Install dependencies for generating social cards.
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards
+RUN apt update && \
+    apt install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev && \
+	pip install pillow cairosvg
+
+ENV DCRDEVDOCS_CARDS true
+
 RUN ./bin/build_docs.sh
 
 # Serve image (stable nginx version)
-FROM nginx:1.22-alpine
+FROM nginx:1.24-alpine
 
 LABEL description="dcrdevdocs serve"
 LABEL version="1.0"
-LABEL maintainer "holdstockjamie@gmail.com"
+LABEL maintainer "jholdstock@decred.org"
 
 COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
 
